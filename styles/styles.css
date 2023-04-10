@@ -235,7 +235,7 @@ main h2 {
 }
 /* end of learn banner styles */
 
-/* education */
+/* education styles*/
 .education {
   margin-top: 8em;
   display: flex;
@@ -364,6 +364,56 @@ main h2 {
 }
 /* end of table styles */
 /* end of compare styles */
+
+/* metodology styles */
+.metodology {
+  margin-top: 8em;
+}
+
+.metodology h2 {
+  font-weight: 600;
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.metodology img {
+  width: 90%;
+  margin: auto;
+  margin-bottom: 1em;
+}
+
+.metodology li {
+  font-size: 1.25em;
+  font-weight: 600;
+  width: fit-content;
+  background: linear-gradient(90deg, #fe006b, #ff8800);
+  -webkit-text-fill-color: transparent;
+  background-clip: content-box;
+  -webkit-background-clip: text;
+}
+
+.metodology ul {
+  margin-bottom: 4em;
+  display: flex;
+  justify-content: space-around;
+}
+
+.metodology a {
+  color: #fff;
+  font-size: 1.75em;
+  width: fit-content;
+  font-weight: 600;
+  display: block;
+  margin: auto;
+}
+
+.metodology a:hover {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px #fff;
+}
+/* end of metodology styles */
+/* end of index styles */
 
 /* benefits styles */
 .benefits {
@@ -607,55 +657,6 @@ main h2 {
 
 /* end of benefits styles */
 
-/* metodology styles */
-.metodology {
-  margin-top: 8em;
-}
-
-.metodology h2 {
-  font-weight: 600;
-  font-size: 2em;
-  text-align: center;
-  margin-bottom: 1em;
-}
-
-.metodology img {
-  width: 90%;
-  margin: auto;
-  margin-bottom: 1em;
-}
-
-.metodology li {
-  font-size: 1.25em;
-  font-weight: 600;
-  width: fit-content;
-  background: linear-gradient(90deg, #fe006b, #ff8800);
-  -webkit-text-fill-color: transparent;
-  background-clip: content-box;
-  -webkit-background-clip: text;
-}
-
-.metodology ul {
-  margin-bottom: 4em;
-  display: flex;
-  justify-content: space-around;
-}
-
-.metodology a {
-  color: #fff;
-  font-size: 1.75em;
-  width: fit-content;
-  font-weight: 600;
-  display: block;
-  margin: auto;
-}
-
-.metodology a:hover {
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 1px #fff;
-}
-/* end of metodology styles */
-
 /* footer styles */
 footer svg {
   fill: #fe006b;
@@ -796,15 +797,6 @@ strong {
   text-decoration: none;
 }
 
-.sign-logo-main {
-  display: none;
-}
-
-.bi-arrow-left {
-  transform: scale(2);
-  color: #5f5f5f;
-}
-
 .sign-main h1 {
   font-size: 2.5em;
   line-height: 100%;
@@ -836,6 +828,59 @@ strong {
   background-color: #252525;
 }
 
+.sign-main input {
+  background-color: #2f2f2f;
+  width: 100%;
+  padding: 0.75em;
+  margin-top: 1em;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1em;
+  color: #fff;
+}
+
+.sign-main input:focus {
+  outline: 1px solid #ff2f00;
+}
+
+.sign-main p {
+  margin-top: 0.5em;
+}
+
+.sign-main section a {
+  color: #fe006b;
+  font-weight: 600;
+}
+
+.sign-main section a:hover {
+  text-decoration: underline;
+}
+
+.sign-main footer {
+  position: absolute;
+  font-size: 0.8em;
+  bottom: 1em;
+  margin: auto;
+  text-align: center;
+}
+
+.sign-main footer ul {
+  padding: 0;
+}
+
+.sign-main footer a {
+  color: #fff;
+}
+
+.sign-logo-main {
+  display: none;
+}
+
+.bi-arrow-left {
+  transform: scale(2);
+  color: #5f5f5f;
+}
+
 .line-division {
   margin: 0.5em 0 1em 0;
 }
@@ -854,6 +899,8 @@ strong {
   transform: translateY(-50%);
   left: 0;
   width: 45% !important;
+  background: #5f5f5f;
+  display: inline;
 }
 
 .line-division p::after {
@@ -866,21 +913,6 @@ strong {
   width: 45%;
   transform: translateY(-50%);
   background-color: #5f5f5f;
-}
-
-.sign-main input {
-  background-color: #2f2f2f;
-  width: 100%;
-  padding: 0.75em;
-  margin-top: 1em;
-  border: none;
-  border-radius: 5px;
-  font-size: 1.1em;
-  color: #fff;
-}
-
-.sign-main input:focus {
-  outline: 1px solid #ff2f00;
 }
 
 .sign-button {
@@ -911,59 +943,9 @@ strong {
   background-color: #1f1f1f;
   display: flex;
   flex-direction: column;
-  gap: 0.5em;
-}
-
-.journey {
-  margin: 0 auto;
-  width: 90%;
-}
-
-.sign-main p {
-  margin-top: 0.5em;
-}
-
-.sign-main section a {
-  color: #fe006b;
-  font-weight: 600;
-}
-
-.sign-main section a:hover {
-  text-decoration: underline;
-}
-
-.sign-main footer {
-  position: absolute;
-  font-size: 0.8em;
-  bottom: 1em;
-  margin: auto;
-  text-align: center;
-}
-
-.sign-main footer ul {
-  padding: 0;
-}
-
-.annoying-footer {
-  transform: translateX(50%);
-}
-
-.sign-main footer a {
-  color: #fff;
-}
-
-.sign-rigth {
-  width: 50%;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   gap: 1em;
-}
-
-.sign-logo {
-  width: 50%;
-  margin: 1em 3em 0em auto;
 }
 
 .sign-right h2 {
@@ -988,16 +970,22 @@ strong {
   align-items: center;
 }
 
-.line-division p::before {
-  content: " ";
-  width: 15%;
-  background: #5f5f5f;
-  height: 1px;
-  display: inline;
-}
-
 .sign-right footer svg {
   transform: scale(1.2);
+}
+
+.journey {
+  margin: 0 auto;
+  width: 90%;
+}
+
+.annoying-footer {
+  transform: translateX(50%);
+}
+
+.sign-logo {
+  width: 50%;
+  margin: 1em 3em 0em auto;
 }
 /* sign in and sign up styles end */
 

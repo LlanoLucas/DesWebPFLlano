@@ -1,0 +1,67 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  top: 0;
+  background-color: #212121;
+  padding: 0.5em 2em;
+  border-bottom: 1px solid #5f5f5f;
+  text-decoration: none;
+  position: sticky;
+  z-index: 10;
+  ul {
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
+    li a {
+      color: #fff;
+      font-weight: 600;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.logo {
+  height: 4em;
+  p {
+    font-size: 2em;
+  }
+}
+
+.about-nav {
+  background: linear-gradient(180deg, #fff, #fe006b);
+  -webkit-text-fill-color: transparent;
+  background-clip: content-box;
+  -webkit-background-clip: text;
+}
+
+.benefits-nav {
+  background: linear-gradient(180deg, #fff, #ff8800, #fe006b);
+  -webkit-text-fill-color: transparent;
+  background-clip: content-box;
+  -webkit-background-clip: text;
+}
+
+.courses-nav {
+  background: linear-gradient(180deg, #fff, #dc3500);
+  -webkit-text-fill-color: transparent;
+  background-clip: content-box;
+  -webkit-background-clip: text;
+}
+
+.sign-up {
+  padding: 0.4em;
+  border: 2px solid #fe006b;
+  border-radius: 20px;
+  &:hover {
+    background-color: #fe006b;
+    text-decoration: none;
+    color: #212121;
+  }
+}
+
+.sign-in:hover {
+  color: #fe006b;
+  text-decoration: none;
+}
