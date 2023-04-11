@@ -94,3 +94,41 @@ footer svg {
   fill: #fe006b;
   object-fit: fill;
 }
+
+// sign footer
+.sign-main footer {
+  position: absolute;
+  font-size: 0.8em;
+  bottom: 1em;
+  margin: auto;
+  text-align: center;
+  ul {
+    padding: 0;
+  }
+  a {
+    color: #fff;
+  }
+}
+
+.sign-right footer {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 3.5em;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+  margin-bottom: 1.5em;
+  font-size: 0.8em;
+  ul {
+    display: flex;
+    gap: 4em;
+    align-items: center;
+  }
+  svg {
+    transform: scale(1.2);
+  }
+}
+
+.annoying-footer {
+  transform: translateX(50%);
+}

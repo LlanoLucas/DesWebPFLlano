@@ -1,0 +1,214 @@
+.benefits {
+  margin-top: 8em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  div {
+    text-align: center;
+  }
+  h2 {
+    font-weight: 600;
+    font-size: 2em;
+  }
+  h3 {
+    font-size: 1.25em;
+    margin-bottom: 1em;
+  }
+  p {
+    margin-bottom: 0.75em;
+  }
+  a {
+    background: linear-gradient(45deg, #fe006b, #ff8800);
+    -webkit-text-fill-color: #212121;
+    -webkit-background-clip: border-box;
+    background-clip: border-box;
+    font-size: 1.25em;
+    font-weight: 600;
+    padding: 0.15em 0.4em;
+    border-radius: 5px;
+    &:hover {
+      -webkit-text-fill-color: #fff;
+    }
+  }
+  img {
+    width: 40%;
+  }
+  &-header {
+    margin: 3em 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+  }
+  &-main {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 5%;
+  }
+  &-body {
+    h1 {
+      font-weight: 600;
+      width: fit-content;
+      line-height: 1em;
+      background: linear-gradient(180deg, #dc3500, #ff8800);
+      -webkit-text-fill-color: transparent;
+      background-clip: content-box;
+      -webkit-background-clip: text;
+      align-self: center;
+      padding: 0;
+    }
+    h2 {
+      font-weight: 600;
+      font-size: 1.25em;
+    }
+  }
+}
+
+.notification {
+  width: 35%;
+  background: transparent;
+  padding: 0.5rem 1rem;
+  background-image: linear-gradient(90deg, #212121, #212121),
+    linear-gradient(180deg, #dc3500, #ff8800);
+  background-clip: padding-box, border-box;
+  background-origin: border-box;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  padding: 2em 1em;
+  height: 30em;
+  display: flex;
+  align-items: space-between;
+  justify-content: center;
+  h3 {
+    font-size: 1.5em;
+    font-weight: 600;
+    width: 100%;
+  }
+  &__container {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    article {
+      width: 80%;
+      line-height: 1.75em;
+    }
+    input:focus {
+      outline: 1px solid #ff2f00;
+    }
+  }
+}
+
+.news-title {
+  display: block;
+  text-align: center;
+  padding: 0.25em;
+}
+
+.second-subscribe {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 0.5em;
+}
+
+.b {
+  &-mail {
+    background-color: #2f2f2f;
+    border: none;
+    padding: 1em;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    display: inline;
+    color: #fff;
+  }
+
+  &-subscribe {
+    background: linear-gradient(90deg, #dc3500, #ff8800);
+    border: none;
+    padding: 1em;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    display: inline;
+  }
+}
+
+.coupon {
+  width: 55%;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  /* grid-template-rows: 1fr 2fr; */
+  background: linear-gradient(45deg, #fe006b, #ff8800);
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  height: 20em;
+  &__header {
+    padding: 2em;
+    p {
+      font-size: 1.6em;
+      font-weight: 600;
+      color: #212121;
+    }
+    a {
+      display: block;
+      text-align: end;
+      margin-right: 2em;
+      color: #212121;
+      font-weight: 600;
+    }
+  }
+  &__container {
+    background: #212121;
+    width: 70%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    background: transparent;
+    background-image: linear-gradient(90deg, #212121, #212121),
+      linear-gradient(180deg, #dc3500, #ff8800);
+    background-clip: padding-box, border-box;
+    background-origin: border-box;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    justify-content: center;
+    p {
+      font-size: 1.1em;
+      font-weight: 600;
+      width: 80%;
+      text-align: center;
+      padding-bottom: 1.5em;
+    }
+  }
+  &-copy {
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    font-size: 1.75em;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    margin: 2em 0 0.5em 0;
+    background: transparent;
+    background-image: linear-gradient(90deg, #212121, #212121),
+      linear-gradient(180deg, #dc3500, #ff8800);
+    background-clip: padding-box, border-box;
+    background-origin: border-box;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    cursor: pointer;
+    strong {
+      /* border-right: 2px solid #5f5f5f; */
+      padding: 0.5em 0;
+      font-weight: 600;
+    }
+    svg {
+      scale: 2.5;
+      width: 1.25em;
+      fill: #ff8800;
+    }
+  }
+}
