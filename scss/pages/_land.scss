@@ -1,3 +1,5 @@
+@use "../utils" as u;
+
 .index-section-left {
   display: flex;
   flex-direction: column;
@@ -33,7 +35,7 @@ main h2 {
   display: flex;
   height: 90vh;
   a {
-    color: #fe006b;
+    color: u.$main-clr;
     font-weight: 600;
     font-size: 1.25em;
     &:hover {
@@ -70,7 +72,7 @@ main h2 {
     font-size: 2em;
   }
 }
-// end of header styles
+/*end of header styles*/
 
 /* learn banner styles */
 .learn-banner {
@@ -159,7 +161,7 @@ main h2 {
     margin-bottom: 1em;
   }
 }
-//   end of education styles
+/* end of education styles */
 
 /* compare styles */
 .compare {
@@ -266,5 +268,4 @@ main h2 {
     }
   }
 }
-
 /* end of metodology styles */

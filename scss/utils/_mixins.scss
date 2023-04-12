@@ -8,3 +8,7 @@ $breakpoints: (
     @content;
   }
 }
+
+@mixin gradient($deg, $clr-1, $clr-2) {
+  background: linear-gradient(($deg) deg, $clr-1, $clr-2);
+}
