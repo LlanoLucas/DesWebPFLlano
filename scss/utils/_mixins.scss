@@ -9,6 +9,6 @@ $breakpoints: (
   }
 }
 
-@mixin gradient($deg, $clr-1, $clr-2) {
-  background: linear-gradient(($deg) deg, $clr-1, $clr-2);
+@mixin gradient($dir, $clr-1, $clr-2) {
+  background: linear-gradient($dir, $clr-1, $clr-2);
 }

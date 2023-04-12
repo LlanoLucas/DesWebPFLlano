@@ -20,8 +20,8 @@
     margin-bottom: 0.75em;
   }
   a {
-    background: linear-gradient(45deg, #fe006b, #ff8800);
-    -webkit-text-fill-color: #212121;
+    @include u.gradient(45deg, u.$main-clr, u.$secondary-clr);
+    -webkit-text-fill-color: u.$body-clr;
     -webkit-background-clip: border-box;
     background-clip: border-box;
     font-size: 1.25em;
@@ -29,7 +29,7 @@
     padding: 0.15em 0.4em;
     border-radius: 5px;
     &:hover {
-      -webkit-text-fill-color: #fff;
+      -webkit-text-fill-color: u.$text-clr;
     }
   }
   img {
@@ -62,7 +62,7 @@
       font-weight: 600;
       width: fit-content;
       line-height: 1em;
-      background: linear-gradient(180deg, #dc3500, #ff8800);
+      @include u.gradient(180deg, u.$dark-secondary-clr, u.$secondary-clr);
       -webkit-text-fill-color: transparent;
       background-clip: content-box;
       -webkit-background-clip: text;
@@ -84,8 +84,8 @@
   width: 35%;
   background: transparent;
   padding: 0.5rem 1rem;
-  background-image: linear-gradient(90deg, #212121, #212121),
-    linear-gradient(180deg, #dc3500, #ff8800);
+  background-image: linear-gradient(90deg, u.$body-clr, u.$body-clr),
+    linear-gradient(180deg, u.$dark-secondary-clr, u.$secondary-clr);
   background-clip: padding-box, border-box;
   background-origin: border-box;
   border: 2px solid transparent;
@@ -111,7 +111,7 @@
       line-height: 1.75em;
     }
     input:focus {
-      outline: 1px solid #ff2f00;
+      outline: 1px solid u.$focus-clr;
     }
   }
 }
@@ -131,17 +131,17 @@
 
 .b {
   &-mail {
-    background-color: #2f2f2f;
+    background-color: u.$light-body-clr;
     border: none;
     padding: 1em;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     display: inline;
-    color: #fff;
+    color: u.$text-clr;
   }
 
   &-subscribe {
-    background: linear-gradient(90deg, #dc3500, #ff8800);
+    @include u.gradient(90deg, u.$dark-secondary-clr, u.$secondary-clr);
     border: none;
     padding: 1em;
     border-top-right-radius: 5px;
@@ -154,8 +154,7 @@
   width: 55%;
   display: grid;
   grid-template-rows: 1fr 1fr;
-  /* grid-template-rows: 1fr 2fr; */
-  background: linear-gradient(45deg, #fe006b, #ff8800);
+  @include u.gradient(45deg, u.$main-clr, u.$secondary-clr);
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   height: 20em;
@@ -168,24 +167,24 @@
     p {
       font-size: 1.6em;
       font-weight: 600;
-      color: #212121;
+      color: u.$body-clr;
     }
     a {
       display: block;
       text-align: end;
       margin-right: 2em;
-      color: #212121;
+      color: u.$body-clr;
       font-weight: 600;
     }
   }
   &__container {
-    background: #212121;
+    background: u.$body-clr;
     width: 70%;
     margin-left: 50%;
     transform: translateX(-50%);
     background: transparent;
-    background-image: linear-gradient(90deg, #212121, #212121),
-      linear-gradient(180deg, #dc3500, #ff8800);
+    background-image: linear-gradient(90deg, u.$body-clr, u.$body-clr),
+      linear-gradient(180deg, u.$dark-secondary-clr, u.$secondary-clr);
     background-clip: padding-box, border-box;
     background-origin: border-box;
     border: 2px solid transparent;
@@ -213,22 +212,21 @@
     gap: 1em;
     margin: 2em 0 0.5em 0;
     background: transparent;
-    background-image: linear-gradient(90deg, #212121, #212121),
-      linear-gradient(180deg, #dc3500, #ff8800);
+    background-image: linear-gradient(90deg, u.$body-clr, u.$body-clr),
+      linear-gradient(180deg, u.$dark-secondary-clr, u.$secondary-clr);
     background-clip: padding-box, border-box;
     background-origin: border-box;
     border: 2px solid transparent;
     border-radius: 10px;
     cursor: pointer;
     strong {
-      /* border-right: 2px solid #5f5f5f; */
       padding: 0.5em 0;
       font-weight: 600;
     }
     svg {
       scale: 2.5;
       width: 1.25em;
-      fill: #ff8800;
+      fill: u.$secondary-clr;
     }
   }
 }
