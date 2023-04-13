@@ -1071,13 +1071,19 @@ strong {
 }
 
 .course-card {
-  background-color: #2e2e2e;
   border-radius: 7px;
   width: 31%;
   padding: 1.5em 1.5em 0 1.5em;
   display: flex;
   flex-direction: column;
   height: max-content;
+  background: transparent;
+  background-image: linear-gradient(45deg, #212121, #212121),
+    linear-gradient(180deg, #fe006b, #ff8800);
+  background-clip: padding-box, border-box;
+  background-origin: border-box;
+  border: 2px solid transparent;
+  border-radius: 10px;
 }
 
 .course-card__header {
@@ -1537,8 +1543,6 @@ strong {
   }
 
   .second-subscribe {
-    display: flex;
-    gap: 0.5em;
     flex-direction: column;
   }
 
@@ -1603,6 +1607,11 @@ strong {
 
   .nav-ul {
     flex-direction: column;
+    padding: 0;
+  }
+
+  .navbar-collapse {
+    margin-top: 1.5em;
   }
 
   .nav-ul svg {

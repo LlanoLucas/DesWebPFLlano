@@ -46,6 +46,12 @@ nav {
   position: sticky;
   z-index: 10;
 }
+@media (max-width: 30em) {
+  nav {
+    width: 100%;
+    padding: 1em 1em;
+  }
+}
 nav ul {
   display: flex;
   align-items: center;
@@ -57,6 +63,11 @@ nav ul li a {
 }
 nav ul li a:hover {
   text-decoration: underline;
+}
+@media (max-width: 30em) {
+  nav ul li a {
+    text-decoration: none;
+  }
 }
 
 .logo {
@@ -103,6 +114,29 @@ nav ul li a:hover {
   text-decoration: none;
 }
 
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-toggler {
+  border: 1px solid #fff;
+}
+
+@media (max-width: 30em) {
+  .nav-ul {
+    flex-direction: column;
+    padding: 0;
+  }
+  .nav-ul svg {
+    scale: 1.25;
+  }
+  .nav-ul li {
+    font-size: 1.25em;
+  }
+  .navbar-collapse {
+    margin-top: 1.5em;
+  }
+}
 footer {
   margin-top: 10em;
 }
@@ -111,6 +145,11 @@ footer {
   width: 80%;
   margin: auto;
   margin-bottom: 4em;
+}
+@media (max-width: 30em) {
+  .faqs {
+    width: 90%;
+  }
 }
 .faqs h2 {
   font-size: 1.75em;
@@ -123,6 +162,11 @@ footer {
 .faqs li {
   border-bottom: 2px solid #5f5f5f;
   padding: 1em 1.5em;
+}
+@media (max-width: 30em) {
+  .faqs li {
+    padding: 1em;
+  }
 }
 
 .news {
@@ -183,6 +227,13 @@ footer {
   align-items: center;
   padding: 0.5em 0;
 }
+@media (max-width: 30em) {
+  .main-ul {
+    flex-direction: column;
+    gap: 0.25em;
+    align-items: center;
+  }
+}
 
 .footer-title {
   font-size: 1.75em;
@@ -193,6 +244,13 @@ footer {
   gap: 2em;
   display: flex;
   justify-content: space-between;
+}
+@media (max-width: 30em) {
+  .svg-ul {
+    padding: 0;
+    gap: 4em;
+    margin-top: 1.5em;
+  }
 }
 
 footer svg {
@@ -512,6 +570,11 @@ main h2 {
   display: flex;
   height: 100vh;
 }
+@media (max-width: 30em) {
+  .sign-body {
+    flex-direction: column;
+  }
+}
 
 .sign-main {
   width: 50%;
@@ -522,6 +585,14 @@ main h2 {
   display: flex;
   flex-direction: column;
 }
+@media (max-width: 30em) {
+  .sign-main {
+    margin-top: 10em;
+    width: 100%;
+    flex-direction: column;
+    padding: 0 0 2em 0;
+  }
+}
 .sign-main a {
   text-decoration: none;
 }
@@ -529,12 +600,23 @@ main h2 {
   font-size: 2.5em;
   line-height: 100%;
 }
+@media (max-width: 30em) {
+  .sign-main h1 {
+    font-size: 3em;
+  }
+}
 .sign-main h2 {
   font-size: 1em;
   margin-bottom: 2em;
 }
 .sign-main p {
   margin-top: 0.5em;
+}
+@media (max-width: 30em) {
+  .sign-main p {
+    margin-top: 1em;
+    font-size: 1.1em;
+  }
 }
 .sign-main section a {
   color: #fe006b;
@@ -591,14 +673,35 @@ main h2 {
 .sign-logo-main {
   display: none;
 }
+@media (max-width: 30em) {
+  .sign-logo-main {
+    display: block;
+    width: 65%;
+    position: absolute;
+    top: 0;
+    margin-left: 0;
+    transform: translateX(-50%);
+    top: 1em;
+  }
+}
 
 .bi-arrow-left {
   transform: scale(2);
   color: #5f5f5f;
 }
+@media (max-width: 30em) {
+  .bi-arrow-left {
+    display: none;
+  }
+}
 
 .line-division {
   margin: 0.5em 0 1em 0;
+}
+@media (max-width: 30em) {
+  .line-division {
+    margin: 2em 0 1em 0;
+  }
 }
 .line-division p {
   position: relative;
@@ -640,6 +743,11 @@ main h2 {
   margin-top: 1.5em;
   cursor: pointer;
 }
+@media (max-width: 30em) {
+  .sign-button {
+    font-size: 1.25em;
+  }
+}
 .sign-button:hover {
   background: linear-gradient(45deg, #fe006b, #ff5500);
 }
@@ -648,6 +756,12 @@ main h2 {
   display: flex;
   justify-content: center;
   gap: 1em;
+}
+@media (max-width: 30em) {
+  .sign-options {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .sign-right {
@@ -659,9 +773,20 @@ main h2 {
   justify-content: center;
   gap: 1em;
 }
+@media (max-width: 30em) {
+  .sign-right {
+    width: 100%;
+    padding-top: 2em;
+  }
+}
 .sign-right h2 {
   font-size: 2em;
   text-align: center;
+}
+@media (max-width: 30em) {
+  .sign-right h2 {
+    margin-bottom: 2em;
+  }
 }
 .sign-right footer {
   display: flex;
@@ -673,30 +798,77 @@ main h2 {
   margin-bottom: 1.5em;
   font-size: 0.8em;
 }
+@media (max-width: 30em) {
+  .sign-right footer {
+    margin-bottom: 1em;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5em;
+  }
+  .sign-right footer p {
+    font-size: 1.2em;
+  }
+}
 .sign-right footer ul {
   display: flex;
   gap: 4em;
   align-items: center;
 }
+@media (max-width: 30em) {
+  .sign-right footer ul {
+    padding: 0;
+  }
+}
 .sign-right footer svg {
   transform: scale(1.2);
+}
+@media (max-width: 30em) {
+  .sign-right footer svg {
+    transform: scale(1.75);
+  }
 }
 
 .journey {
   margin: 0 auto;
   width: 90%;
 }
+@media (max-width: 30em) {
+  .journey {
+    width: 100%;
+  }
+}
 
 .annoying-footer {
   transform: translateX(50%);
+}
+@media (max-width: 30em) {
+  .annoying-footer {
+    position: static !important;
+    transform: translate(0) !important;
+  }
 }
 
 .sign-logo {
   width: 50%;
   margin: 1em 3em 0em auto;
 }
+@media (max-width: 30em) {
+  .sign-logo {
+    display: none;
+  }
+}
 
 /* sign in and sign up styles end */
+@media (max-width: 30em) {
+  .not-annoying-footer {
+    position: static !important;
+    transform: translate(0) !important;
+    padding-top: 2em;
+  }
+  .p-link {
+    margin-bottom: 3em;
+  }
+}
 .courses-header {
   display: flex;
   justify-content: space-between;
@@ -772,13 +944,18 @@ main h2 {
 }
 
 .course-card {
-  background-color: #2f2f2f;
   border-radius: 7px;
   width: 31%;
   padding: 1.5em 1.5em 0 1.5em;
   display: flex;
   flex-direction: column;
   height: max-content;
+  background: transparent;
+  background-image: linear-gradient(45deg, #212121, #212121), linear-gradient(180deg, #fe006b, #ff8800);
+  background-clip: padding-box, border-box;
+  background-origin: border-box;
+  border: 2px solid transparent;
+  border-radius: 10px;
 }
 .course-card ul {
   padding: 0.5em 2em 1em 2em;
@@ -955,12 +1132,20 @@ main h2 {
     font-weight: 400;
   }
 }
+@media (max-width: 30em) {
+  .benefits-body footer {
+    margin-top: 10em;
+  }
+  .benefits-body footer svg {
+    scale: 1.75;
+  }
+}
 
 .notification {
   width: 35%;
-  background: transparent;
   padding: 0.5rem 1rem;
-  background-image: linear-gradient(90deg, #212121, #212121), linear-gradient(180deg, #dc3500, #ff8800);
+  background: transparent;
+  background-image: linear-gradient(45deg, #212121, #212121), linear-gradient(180deg, #dc3500, #ff8800);
   background-clip: padding-box, border-box;
   background-origin: border-box;
   border: 2px solid transparent;
@@ -971,10 +1156,28 @@ main h2 {
   align-items: space-between;
   justify-content: center;
 }
+@media (max-width: 30em) {
+  .notification {
+    width: 90%;
+    height: 35em;
+  }
+  .notification strong {
+    font-size: 1.25em;
+    padding-top: 1em;
+    width: 15em;
+  }
+}
 .notification h3 {
   font-size: 1.5em;
   font-weight: 600;
   width: 100%;
+}
+@media (max-width: 30em) {
+  .notification h3 {
+    text-align: center;
+    margin-bottom: 1em;
+    font-size: 1.5em;
+  }
 }
 .notification__container {
   width: 90%;
@@ -986,6 +1189,12 @@ main h2 {
 .notification__container article {
   width: 80%;
   line-height: 1.75em;
+}
+@media (max-width: 30em) {
+  .notification__container article {
+    width: 100%;
+    text-align: center;
+  }
 }
 .notification__container input:focus {
   outline: 1px solid #ff2f00;
@@ -1003,6 +1212,11 @@ main h2 {
   justify-content: center;
   gap: 0.5em;
 }
+@media (max-width: 30em) {
+  .second-subscribe {
+    flex-direction: column;
+  }
+}
 
 .b-mail {
   background-color: #2e2e2e;
@@ -1013,6 +1227,11 @@ main h2 {
   display: inline;
   color: #fff;
 }
+@media (max-width: 30em) {
+  .b-mail {
+    border-radius: 5px;
+  }
+}
 .b-subscribe {
   background: linear-gradient(90deg, #dc3500, #ff8800);
   border: none;
@@ -1020,6 +1239,15 @@ main h2 {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   display: inline;
+}
+@media (max-width: 30em) {
+  .b-subscribe {
+    border-radius: 5px;
+    font-weight: 600;
+  }
+  .b-subscribe input:focus {
+    outline: 1px solid #ff2f00;
+  }
 }
 
 .coupon {
@@ -1045,6 +1273,11 @@ main h2 {
   font-weight: 600;
   color: #212121;
 }
+@media (max-width: 30em) {
+  .coupon__header p {
+    font-size: 1.5em;
+  }
+}
 .coupon__header a {
   display: block;
   text-align: end;
@@ -1052,13 +1285,18 @@ main h2 {
   color: #212121;
   font-weight: 600;
 }
+@media (max-width: 30em) {
+  .coupon__header a {
+    margin: 0;
+    font-size: 1.1em;
+  }
+}
 .coupon__container {
-  background: #212121;
   width: 70%;
   margin-left: 50%;
   transform: translateX(-50%);
   background: transparent;
-  background-image: linear-gradient(90deg, #212121, #212121), linear-gradient(180deg, #dc3500, #ff8800);
+  background-image: linear-gradient(45deg, #212121, #212121), linear-gradient(180deg, #dc3500, #ff8800);
   background-clip: padding-box, border-box;
   background-origin: border-box;
   border: 2px solid transparent;
@@ -1068,6 +1306,11 @@ main h2 {
   align-items: center;
   gap: 2em;
   justify-content: center;
+}
+@media (max-width: 30em) {
+  .coupon__container {
+    width: 90%;
+  }
 }
 .coupon__container p {
   font-size: 1.1em;
@@ -1086,12 +1329,20 @@ main h2 {
   gap: 1em;
   margin: 2em 0 0.5em 0;
   background: transparent;
-  background-image: linear-gradient(90deg, #212121, #212121), linear-gradient(180deg, #dc3500, #ff8800);
+  background-image: linear-gradient(45deg, #212121, #212121), linear-gradient(180deg, #dc3500, #ff8800);
   background-clip: padding-box, border-box;
   background-origin: border-box;
   border: 2px solid transparent;
   border-radius: 10px;
   cursor: pointer;
+}
+@media (max-width: 30em) {
+  .coupon-copy {
+    width: 90%;
+    margin-top: 0.5em;
+    justify-content: center;
+    gap: 0.5em;
+  }
 }
 .coupon-copy strong {
   padding: 0.5em 0;

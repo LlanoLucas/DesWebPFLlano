@@ -12,3 +12,12 @@ $breakpoints: (
 @mixin gradient($dir, $clr-1, $clr-2) {
   background: linear-gradient($dir, $clr-1, $clr-2);
 }
+
+@mixin gradient-border($dir, $clr-1, $clr-2) {
+  background: transparent;
+  background-image: linear-gradient(45deg, #212121, #212121),
+    linear-gradient($dir, $clr-1, $clr-2);
+  background-clip: padding-box, border-box;
+  background-origin: border-box;
+  border: 2px solid transparent;
+}

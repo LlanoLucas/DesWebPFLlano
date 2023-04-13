@@ -77,28 +77,45 @@
         font-weight: 400;
       }
     }
+    @include u.breakpoint(sm) {
+      footer {
+        margin-top: 10em;
+        svg {
+          scale: 1.75;
+        }
+      }
+    }
   }
 }
 
 .notification {
   width: 35%;
-  background: transparent;
   padding: 0.5rem 1rem;
-  background-image: linear-gradient(90deg, u.$body-clr, u.$body-clr),
-    linear-gradient(180deg, u.$dark-secondary-clr, u.$secondary-clr);
-  background-clip: padding-box, border-box;
-  background-origin: border-box;
-  border: 2px solid transparent;
+  @include u.gradient-border(180deg, u.$dark-secondary-clr, u.$secondary-clr);
   border-radius: 10px;
   padding: 2em 1em;
   height: 30em;
   display: flex;
   align-items: space-between;
   justify-content: center;
+  @include u.breakpoint(sm) {
+    width: 90%;
+    height: 35em;
+    strong {
+      font-size: 1.25em;
+      padding-top: 1em;
+      width: 15em;
+    }
+  }
   h3 {
     font-size: 1.5em;
     font-weight: 600;
     width: 100%;
+    @include u.breakpoint(sm) {
+      text-align: center;
+      margin-bottom: 1em;
+      font-size: 1.5em;
+    }
   }
   &__container {
     width: 90%;
@@ -109,6 +126,10 @@
     article {
       width: 80%;
       line-height: 1.75em;
+      @include u.breakpoint(sm) {
+        width: 100%;
+        text-align: center;
+      }
     }
     input:focus {
       outline: 1px solid u.$focus-clr;
@@ -127,6 +148,9 @@
   width: 100%;
   justify-content: center;
   gap: 0.5em;
+  @include u.breakpoint(sm) {
+    flex-direction: column;
+  }
 }
 
 .b {
@@ -138,6 +162,9 @@
     border-bottom-left-radius: 5px;
     display: inline;
     color: u.$text-clr;
+    @include u.breakpoint(sm) {
+      border-radius: 5px;
+    }
   }
 
   &-subscribe {
@@ -147,6 +174,13 @@
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     display: inline;
+    @include u.breakpoint(sm) {
+      border-radius: 5px;
+      font-weight: 600;
+      input:focus {
+        outline: 1px solid #ff2f00;
+      }
+    }
   }
 }
 
@@ -168,6 +202,9 @@
       font-size: 1.6em;
       font-weight: 600;
       color: u.$body-clr;
+      @include u.breakpoint(sm) {
+        font-size: 1.5em;
+      }
     }
     a {
       display: block;
@@ -175,25 +212,26 @@
       margin-right: 2em;
       color: u.$body-clr;
       font-weight: 600;
+      @include u.breakpoint(sm) {
+        margin: 0;
+        font-size: 1.1em;
+      }
     }
   }
   &__container {
-    background: u.$body-clr;
     width: 70%;
     margin-left: 50%;
     transform: translateX(-50%);
-    background: transparent;
-    background-image: linear-gradient(90deg, u.$body-clr, u.$body-clr),
-      linear-gradient(180deg, u.$dark-secondary-clr, u.$secondary-clr);
-    background-clip: padding-box, border-box;
-    background-origin: border-box;
-    border: 2px solid transparent;
+    @include u.gradient-border(180deg, u.$dark-secondary-clr, u.$secondary-clr);
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 2em;
     justify-content: center;
+    @include u.breakpoint(sm) {
+      width: 90%;
+    }
     p {
       font-size: 1.1em;
       font-weight: 600;
@@ -211,14 +249,15 @@
     justify-content: center;
     gap: 1em;
     margin: 2em 0 0.5em 0;
-    background: transparent;
-    background-image: linear-gradient(90deg, u.$body-clr, u.$body-clr),
-      linear-gradient(180deg, u.$dark-secondary-clr, u.$secondary-clr);
-    background-clip: padding-box, border-box;
-    background-origin: border-box;
-    border: 2px solid transparent;
+    @include u.gradient-border(180deg, u.$dark-secondary-clr, u.$secondary-clr);
     border-radius: 10px;
     cursor: pointer;
+    @include u.breakpoint(sm) {
+      width: 90%;
+      margin-top: 0.5em;
+      justify-content: center;
+      gap: 0.5em;
+    }
     strong {
       padding: 0.5em 0;
       font-weight: 600;
