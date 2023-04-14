@@ -1186,6 +1186,7 @@ main h2 {
 @media (max-width: 30em) {
   .sign-right footer ul {
     padding: 0;
+    gap: 5em;
   }
 }
 .sign-right footer svg {
@@ -1193,7 +1194,7 @@ main h2 {
 }
 @media (max-width: 30em) {
   .sign-right footer svg {
-    transform: scale(1.75);
+    transform: scale(1.5);
   }
 }
 
@@ -1537,6 +1538,16 @@ main h2 {
   display: block;
   text-align: center;
   padding: 0.25em;
+  text-align: center;
+}
+.news h2,
+.news strong {
+  font-size: 1.25em;
+  font-weight: 400;
+  background: linear-gradient(90deg, #fe006b, #ff8800);
+  -webkit-text-fill-color: transparent;
+  background-clip: content-box;
+  -webkit-background-clip: text;
 }
 
 .second-subscribe {

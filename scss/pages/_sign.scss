@@ -224,12 +224,13 @@
       align-items: center;
       @include u.breakpoint(sm) {
         padding: 0;
+        gap: 5em;
       }
     }
     svg {
       transform: scale(1.2);
       @include u.breakpoint(sm) {
-        transform: scale(1.75);
+        transform: scale(1.5);
       }
     }
   }

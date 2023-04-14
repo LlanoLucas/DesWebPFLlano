@@ -103,10 +103,22 @@
   }
 }
 
-.news-title {
-  display: block;
-  text-align: center;
-  padding: 0.25em;
+.news {
+  &-title {
+    display: block;
+    text-align: center;
+    padding: 0.25em;
+    text-align: center;
+  }
+  h2,
+  strong {
+    font-size: 1.25em;
+    font-weight: 400;
+    background: linear-gradient(90deg, #fe006b, #ff8800);
+    -webkit-text-fill-color: transparent;
+    background-clip: content-box;
+    -webkit-background-clip: text;
+  }
 }
 
 .second-subscribe {
