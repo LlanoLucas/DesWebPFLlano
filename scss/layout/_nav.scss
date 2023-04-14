@@ -68,11 +68,20 @@ nav {
     text-decoration: none;
     color: #212121;
   }
+  @include u.breakpoint(sm) {
+    text-decoration: none;
+    border-radius: 10px;
+  }
 }
 
-.sign-in:hover {
-  color: #fe006b;
-  text-decoration: none;
+.sign-in {
+  &:hover {
+    color: #fe006b;
+    text-decoration: none;
+  }
+  @include u.breakpoint(sm) {
+    color: u.$main-clr;
+  }
 }
 
 .navbar-toggler-icon {
@@ -94,7 +103,19 @@ nav {
       font-size: 1.25em;
     }
   }
-  .navbar-collapse {
-    margin-top: 1.5em;
+  .navbar {
+    &-collapse {
+      margin: 1.5em 0 0.5em 0;
+    }
+    &-expand-lg {
+      padding: 0.5em 1em;
+      position: sticky;
+      margin-top: 0;
+    }
+  }
+  .bi-heart::before {
+    content: "Liked courses";
+    color: u.$text-clr;
+    position: relative;
   }
 }

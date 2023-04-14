@@ -35,8 +35,22 @@ footer {
   width: 70%;
   margin: auto;
   margin-top: 2em;
+  @include u.breakpoint(sm) {
+    flex-direction: column;
+  }
   &-title {
     text-align: center;
+    @include u.breakpoint(sm) {
+      margin-bottom: 1.25em;
+      h2 {
+        margin: 0;
+        font-size: 1.25em;
+      }
+      h3 {
+        margin: 0;
+        font-size: 1em !important;
+      }
+    }
   }
   h2,
   strong {
@@ -60,6 +74,9 @@ footer {
   width: 18em;
   color: #fff;
   font-size: 1em;
+  @include u.breakpoint(sm) {
+    font-size: 1.1em;
+  }
 }
 
 .subscribe {
@@ -70,6 +87,11 @@ footer {
   color: #fff;
   cursor: pointer;
   margin-left: 0.25em;
+  @include u.breakpoint(sm) {
+    width: 18em;
+    margin: 0.75em 0 0 0;
+    font-size: 1.1em;
+  }
 }
 
 .bottom {
@@ -92,6 +114,16 @@ footer {
   }
 }
 
+.f {
+  &-help,
+  &-contact {
+    text-decoration: none;
+    @include u.breakpoint(sm) {
+      display: none;
+    }
+  }
+}
+
 .footer-title {
   font-size: 1.75em;
   margin: 0;
@@ -111,6 +143,10 @@ footer {
 footer svg {
   fill: #fe006b;
   object-fit: fill;
+  scale: 1.25;
+  @include u.breakpoint(sm) {
+    scale: 1.5;
+  }
 }
 
 // sign footer
@@ -149,4 +185,13 @@ footer svg {
 
 .annoying-footer {
   transform: translateX(50%);
+}
+
+@include u.breakpoint(sm) {
+  .f {
+    &-help,
+    &-contact {
+      display: none;
+    }
+  }
 }

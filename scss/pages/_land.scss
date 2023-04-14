@@ -109,6 +109,7 @@ main h2 {
 .learn-banner {
   background: linear-gradient(90deg, #fe006a2c, #fe006b);
   padding: 2em 0;
+  width: 100%;
   @include u.breakpoint(sm) {
     width: 100%;
     padding-bottom: 5em;
@@ -116,14 +117,13 @@ main h2 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
   }
   h3 {
     font-size: 2em;
     font-weight: 600;
     padding-bottom: 0.5em;
-    margin-left: 50%;
-    transform: translateX(-50%);
-    display: inline-block;
+    text-align: center;
     @include u.breakpoint(sm) {
       display: block;
       text-align: center;
@@ -134,9 +134,11 @@ main h2 {
   p {
     font-size: 1.25em;
     padding: 0.25em;
-    margin-left: 50%;
-    transform: translateX(-50%);
-    width: max-content;
+    // margin-left: 50%;
+    // transform: translateX(-50%);
+    // width: max-content;
+    display: block;
+    text-align: center;
     font-weight: 400;
     @include u.breakpoint(sm) {
       width: 80%;
@@ -152,6 +154,7 @@ main h2 {
     margin-left: 0.5em;
     box-sizing: border-box;
     font-weight: 600;
+    text-decoration: none;
     &:hover {
       border: 1px solid #fff;
     }
@@ -160,7 +163,8 @@ main h2 {
       left: 50%;
       transform: translateX(-50%);
       margin-top: 3em;
-      width: 100%;
+      margin-left: 0;
+      width: 90%;
       text-decoration: none;
     }
   }
@@ -352,6 +356,15 @@ main h2 {
   display: flex;
   align-items: center;
   justify-content: center;
+  @include u.breakpoint(sm) {
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+    margin-top: 6em;
+    gap: 2em;
+    justify-content: center;
+    align-items: center;
+  }
   div {
     text-align: center;
   }
@@ -365,6 +378,11 @@ main h2 {
   }
   p {
     margin-bottom: 0.75em;
+    @include u.breakpoint(sm) {
+      font-size: 1.1em;
+      width: 90%;
+      margin: 1em auto;
+    }
   }
   a {
     @include u.gradient(45deg, u.$main-clr, u.$secondary-clr);
@@ -375,12 +393,20 @@ main h2 {
     font-weight: 600;
     padding: 0.15em 0.4em;
     border-radius: 5px;
+    text-decoration: none;
     &:hover {
       -webkit-text-fill-color: u.$text-clr;
+    }
+    @include u.breakpoint(sm) {
+      border-radius: 0;
     }
   }
   img {
     width: 40%;
+    @include u.breakpoint(sm) {
+      order: 2;
+      width: 100%;
+    }
   }
 }
 
@@ -392,11 +418,18 @@ main h2 {
     font-size: 2em;
     text-align: center;
     margin-bottom: 1em;
+    @include u.breakpoint(sm) {
+      width: 90%;
+      margin: auto;
+    }
   }
   img {
     width: 90%;
     margin: auto;
     margin-bottom: 1em;
+    @include u.breakpoint(sm) {
+      display: none;
+    }
   }
   li {
     font-size: 1.25em;
@@ -411,6 +444,32 @@ main h2 {
     margin-bottom: 4em;
     display: flex;
     justify-content: space-around;
+    @include u.breakpoint(sm) {
+      flex-direction: column;
+      align-items: center;
+      padding: 0;
+      gap: 1em;
+      margin: 3em 0;
+      li {
+        font-size: 1.5em;
+        width: 10em;
+        border-radius: 15px;
+        text-align: center;
+        padding: 0.25em 0;
+        &:first-child {
+          background: linear-gradient(135deg, #fe006b, #fe006a2c);
+          -webkit-text-fill-color: #fff;
+        }
+        &:nth-child(2) {
+          background: linear-gradient(45deg, #fe006b, #ff8800);
+          -webkit-text-fill-color: #fff;
+        }
+        &:last-child {
+          background: linear-gradient(195deg, #dc3500, #ff8800);
+          -webkit-text-fill-color: #fff;
+        }
+      }
+    }
   }
   a {
     color: #fff;
@@ -422,6 +481,10 @@ main h2 {
     &:hover {
       -webkit-text-fill-color: transparent;
       -webkit-text-stroke: 1px #fff;
+    }
+    @include u.breakpoint(sm) {
+      text-decoration: none;
+      font-size: 2em;
     }
   }
 }

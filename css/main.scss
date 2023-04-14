@@ -108,10 +108,21 @@ nav ul li a:hover {
   text-decoration: none;
   color: #212121;
 }
+@media (max-width: 30em) {
+  .sign-up {
+    text-decoration: none;
+    border-radius: 10px;
+  }
+}
 
 .sign-in:hover {
   color: #fe006b;
   text-decoration: none;
+}
+@media (max-width: 30em) {
+  .sign-in {
+    color: #fe006b;
+  }
 }
 
 .navbar-toggler-icon {
@@ -134,7 +145,17 @@ nav ul li a:hover {
     font-size: 1.25em;
   }
   .navbar-collapse {
-    margin-top: 1.5em;
+    margin: 1.5em 0 0.5em 0;
+  }
+  .navbar-expand-lg {
+    padding: 0.5em 1em;
+    position: sticky;
+    margin-top: 0;
+  }
+  .bi-heart::before {
+    content: "Liked courses";
+    color: #fff;
+    position: relative;
   }
 }
 footer {
@@ -177,8 +198,26 @@ footer {
   margin: auto;
   margin-top: 2em;
 }
+@media (max-width: 30em) {
+  .news {
+    flex-direction: column;
+  }
+}
 .news-title {
   text-align: center;
+}
+@media (max-width: 30em) {
+  .news-title {
+    margin-bottom: 1.25em;
+  }
+  .news-title h2 {
+    margin: 0;
+    font-size: 1.25em;
+  }
+  .news-title h3 {
+    margin: 0;
+    font-size: 1em !important;
+  }
 }
 .news h2,
 .news strong {
@@ -202,6 +241,11 @@ footer {
   color: #fff;
   font-size: 1em;
 }
+@media (max-width: 30em) {
+  .mail {
+    font-size: 1.1em;
+  }
+}
 
 .subscribe {
   background: linear-gradient(135deg, #fe006b, #ff8800);
@@ -211,6 +255,13 @@ footer {
   color: #fff;
   cursor: pointer;
   margin-left: 0.25em;
+}
+@media (max-width: 30em) {
+  .subscribe {
+    width: 18em;
+    margin: 0.75em 0 0 0;
+    font-size: 1.1em;
+  }
 }
 
 .bottom {
@@ -235,6 +286,15 @@ footer {
   }
 }
 
+.f-help, .f-contact {
+  text-decoration: none;
+}
+@media (max-width: 30em) {
+  .f-help, .f-contact {
+    display: none;
+  }
+}
+
 .footer-title {
   font-size: 1.75em;
   margin: 0;
@@ -256,6 +316,12 @@ footer {
 footer svg {
   fill: #fe006b;
   object-fit: fill;
+  scale: 1.25;
+}
+@media (max-width: 30em) {
+  footer svg {
+    scale: 1.5;
+  }
 }
 
 .sign-main footer {
@@ -295,6 +361,11 @@ footer svg {
   transform: translateX(50%);
 }
 
+@media (max-width: 30em) {
+  .f-help, .f-contact {
+    display: none;
+  }
+}
 .index-section-left {
   display: flex;
   flex-direction: column;
@@ -414,6 +485,7 @@ main h2 {
 .learn-banner {
   background: linear-gradient(90deg, rgba(254, 0, 106, 0.1725490196), #fe006b);
   padding: 2em 0;
+  width: 100%;
 }
 @media (max-width: 30em) {
   .learn-banner {
@@ -423,15 +495,14 @@ main h2 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
   }
 }
 .learn-banner h3 {
   font-size: 2em;
   font-weight: 600;
   padding-bottom: 0.5em;
-  margin-left: 50%;
-  transform: translateX(-50%);
-  display: inline-block;
+  text-align: center;
 }
 @media (max-width: 30em) {
   .learn-banner h3 {
@@ -444,9 +515,8 @@ main h2 {
 .learn-banner p {
   font-size: 1.25em;
   padding: 0.25em;
-  margin-left: 50%;
-  transform: translateX(-50%);
-  width: max-content;
+  display: block;
+  text-align: center;
   font-weight: 400;
 }
 @media (max-width: 30em) {
@@ -464,6 +534,7 @@ main h2 {
   margin-left: 0.5em;
   box-sizing: border-box;
   font-weight: 600;
+  text-decoration: none;
 }
 .learn-banner a:hover {
   border: 1px solid #fff;
@@ -474,7 +545,8 @@ main h2 {
     left: 50%;
     transform: translateX(-50%);
     margin-top: 3em;
-    width: 100%;
+    margin-left: 0;
+    width: 90%;
     text-decoration: none;
   }
 }
@@ -691,6 +763,17 @@ main h2 {
   align-items: center;
   justify-content: center;
 }
+@media (max-width: 30em) {
+  .benefits {
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+    margin-top: 6em;
+    gap: 2em;
+    justify-content: center;
+    align-items: center;
+  }
+}
 .benefits div {
   text-align: center;
 }
@@ -705,6 +788,13 @@ main h2 {
 .benefits p {
   margin-bottom: 0.75em;
 }
+@media (max-width: 30em) {
+  .benefits p {
+    font-size: 1.1em;
+    width: 90%;
+    margin: 1em auto;
+  }
+}
 .benefits a {
   background: linear-gradient(45deg, #fe006b, #ff8800);
   -webkit-text-fill-color: #212121;
@@ -714,12 +804,24 @@ main h2 {
   font-weight: 600;
   padding: 0.15em 0.4em;
   border-radius: 5px;
+  text-decoration: none;
 }
 .benefits a:hover {
   -webkit-text-fill-color: #fff;
 }
+@media (max-width: 30em) {
+  .benefits a {
+    border-radius: 0;
+  }
+}
 .benefits img {
   width: 40%;
+}
+@media (max-width: 30em) {
+  .benefits img {
+    order: 2;
+    width: 100%;
+  }
 }
 
 /* metodology styles */
@@ -732,10 +834,21 @@ main h2 {
   text-align: center;
   margin-bottom: 1em;
 }
+@media (max-width: 30em) {
+  .metodology h2 {
+    width: 90%;
+    margin: auto;
+  }
+}
 .metodology img {
   width: 90%;
   margin: auto;
   margin-bottom: 1em;
+}
+@media (max-width: 30em) {
+  .metodology img {
+    display: none;
+  }
 }
 .metodology li {
   font-size: 1.25em;
@@ -751,6 +864,34 @@ main h2 {
   display: flex;
   justify-content: space-around;
 }
+@media (max-width: 30em) {
+  .metodology ul {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    gap: 1em;
+    margin: 3em 0;
+  }
+  .metodology ul li {
+    font-size: 1.5em;
+    width: 10em;
+    border-radius: 15px;
+    text-align: center;
+    padding: 0.25em 0;
+  }
+  .metodology ul li:first-child {
+    background: linear-gradient(135deg, #fe006b, rgba(254, 0, 106, 0.1725490196));
+    -webkit-text-fill-color: #fff;
+  }
+  .metodology ul li:nth-child(2) {
+    background: linear-gradient(45deg, #fe006b, #ff8800);
+    -webkit-text-fill-color: #fff;
+  }
+  .metodology ul li:last-child {
+    background: linear-gradient(195deg, #dc3500, #ff8800);
+    -webkit-text-fill-color: #fff;
+  }
+}
 .metodology a {
   color: #fff;
   font-size: 1.75em;
@@ -762,6 +903,12 @@ main h2 {
 .metodology a:hover {
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 1px #fff;
+}
+@media (max-width: 30em) {
+  .metodology a {
+    text-decoration: none;
+    font-size: 2em;
+  }
 }
 
 /* end of metodology styles */
