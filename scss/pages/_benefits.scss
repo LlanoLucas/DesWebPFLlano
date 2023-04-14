@@ -1,40 +1,6 @@
 @use "../utils" as u;
 
 .benefits {
-  margin-top: 8em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  div {
-    text-align: center;
-  }
-  h2 {
-    font-weight: 600;
-    font-size: 2em;
-  }
-  h3 {
-    font-size: 1.25em;
-    margin-bottom: 1em;
-  }
-  p {
-    margin-bottom: 0.75em;
-  }
-  a {
-    @include u.gradient(45deg, u.$main-clr, u.$secondary-clr);
-    -webkit-text-fill-color: u.$body-clr;
-    -webkit-background-clip: border-box;
-    background-clip: border-box;
-    font-size: 1.25em;
-    font-weight: 600;
-    padding: 0.15em 0.4em;
-    border-radius: 5px;
-    &:hover {
-      -webkit-text-fill-color: u.$text-clr;
-    }
-  }
-  img {
-    width: 40%;
-  }
   &-header {
     margin: 3em 0;
     display: flex;

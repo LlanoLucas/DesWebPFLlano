@@ -302,6 +302,11 @@ footer svg {
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 30em) {
+  .index-section-left {
+    width: 100%;
+  }
+}
 
 .title {
   width: 81%;
@@ -330,6 +335,17 @@ main h2 {
   display: flex;
   height: 90vh;
 }
+@media (max-width: 30em) {
+  .index-header {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+  .index-header h1 {
+    margin: 1.5em auto 0.4em auto;
+    text-align: center;
+  }
+}
 .index-header a {
   color: #fe006b;
   font-weight: 600;
@@ -337,6 +353,16 @@ main h2 {
 }
 .index-header a:hover {
   text-decoration: underline;
+}
+@media (max-width: 30em) {
+  .index-header a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.5em;
+    background-color: #fe006b;
+    color: #212121;
+  }
 }
 .index-header ul {
   margin-top: 1em;
@@ -364,8 +390,23 @@ main h2 {
   justify-content: center;
   gap: 1em;
 }
+@media (max-width: 30em) {
+  .index-section-right {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 6em;
+  }
+}
 .index-section-right h2 {
   font-size: 2em;
+}
+@media (max-width: 30em) {
+  .index-section-right h2 {
+    order: -1;
+    display: block;
+    text-align: center;
+  }
 }
 
 /*end of header styles*/
@@ -373,6 +414,16 @@ main h2 {
 .learn-banner {
   background: linear-gradient(90deg, rgba(254, 0, 106, 0.1725490196), #fe006b);
   padding: 2em 0;
+}
+@media (max-width: 30em) {
+  .learn-banner {
+    width: 100%;
+    padding-bottom: 5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 .learn-banner h3 {
   font-size: 2em;
@@ -382,6 +433,14 @@ main h2 {
   transform: translateX(-50%);
   display: inline-block;
 }
+@media (max-width: 30em) {
+  .learn-banner h3 {
+    display: block;
+    text-align: center;
+    align-self: center;
+    margin: 0;
+  }
+}
 .learn-banner p {
   font-size: 1.25em;
   padding: 0.25em;
@@ -389,6 +448,13 @@ main h2 {
   transform: translateX(-50%);
   width: max-content;
   font-weight: 400;
+}
+@media (max-width: 30em) {
+  .learn-banner p {
+    width: 80%;
+    text-align: center;
+    margin-bottom: 1em;
+  }
 }
 .learn-banner a {
   background-color: #212121;
@@ -402,6 +468,16 @@ main h2 {
 .learn-banner a:hover {
   border: 1px solid #fff;
 }
+@media (max-width: 30em) {
+  .learn-banner a {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 3em;
+    width: 100%;
+    text-decoration: none;
+  }
+}
 
 /* end of learn banner styles */
 /* education styles*/
@@ -409,6 +485,11 @@ main h2 {
   margin-top: 8em;
   display: flex;
   justify-content: space-evenly;
+}
+@media (max-width: 30em) {
+  .education {
+    margin-top: 6em;
+  }
 }
 .education img {
   width: 40em;
@@ -421,6 +502,11 @@ main h2 {
   width: 35%;
   padding: 1.5em 0;
   border-radius: 10px;
+}
+@media (max-width: 30em) {
+  .education-card {
+    width: 90%;
+  }
 }
 .education-card h2 {
   background: linear-gradient(45deg, #fe006b, #ff8800);
@@ -438,11 +524,22 @@ main h2 {
   display: block;
   text-align: center;
 }
+@media (max-width: 30em) {
+  .education-card strong {
+    font-size: 1.25em;
+  }
+}
 .education-card p {
   padding: 1em 0;
   text-align: center;
   font-size: 1.25em;
   margin: 0 2em;
+}
+@media (max-width: 30em) {
+  .education-card p {
+    margin: 0 1em;
+    padding: 0.5em 0;
+  }
 }
 .education-card img {
   width: 4em;
@@ -450,11 +547,25 @@ main h2 {
   padding: 0.25em;
   margin: 1em;
 }
+@media (max-width: 30em) {
+  .education-card img {
+    scale: 1.25;
+  }
+}
 .education-card ul {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 1em;
+}
+@media (max-width: 30em) {
+  .education-card ul {
+    padding: 0;
+    justify-content: space-evenly;
+  }
+  .education-card ul li:last-child {
+    display: none;
+  }
 }
 
 /* end of education styles */
@@ -462,16 +573,46 @@ main h2 {
 .compare {
   margin-top: 8em;
 }
+@media (max-width: 30em) {
+  .compare {
+    margin-top: 6em;
+  }
+  .compare h4 {
+    color: #fff;
+    margin: 0;
+    padding: 0;
+  }
+}
 .compare header {
   text-align: center;
   margin-bottom: 4em;
 }
+@media (max-width: 30em) {
+  .compare header p {
+    font-size: 1.1em;
+    margin-top: 1em;
+  }
+}
 .compare h2 {
   font-size: 2em;
-  font-weight: 699;
+  font-weight: 600;
+}
+@media (max-width: 30em) {
+  .compare h2 {
+    width: 90%;
+    text-align: center;
+    margin: auto;
+  }
 }
 .compare h3 {
   font-size: 1.2em;
+}
+@media (max-width: 30em) {
+  .compare h3 {
+    margin: auto;
+    width: 80%;
+    padding-top: 0.25em;
+  }
 }
 
 .research {
@@ -481,6 +622,12 @@ main h2 {
 /* table styles */
 .table {
   width: 35%;
+}
+@media (max-width: 30em) {
+  .table {
+    width: 80%;
+    margin: 0;
+  }
 }
 .table img {
   width: 8em;
@@ -504,11 +651,27 @@ main h2 {
   padding: 0 0.3em;
   border-radius: 5px;
 }
+@media (max-width: 30em) {
+  .vs {
+    margin: 1.25em 0;
+  }
+}
 
 .compare-tables {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+}
+@media (max-width: 30em) {
+  .compare-tables {
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+  }
+  .compare-tables ul {
+    padding: 0;
+    color: #fff;
+  }
 }
 
 .table-header {
@@ -522,6 +685,43 @@ main h2 {
 
 /* end of table styles */
 /* end of compare styles */
+.benefits {
+  margin-top: 8em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.benefits div {
+  text-align: center;
+}
+.benefits h2 {
+  font-weight: 600;
+  font-size: 2em;
+}
+.benefits h3 {
+  font-size: 1.25em;
+  margin-bottom: 1em;
+}
+.benefits p {
+  margin-bottom: 0.75em;
+}
+.benefits a {
+  background: linear-gradient(45deg, #fe006b, #ff8800);
+  -webkit-text-fill-color: #212121;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  font-size: 1.25em;
+  font-weight: 600;
+  padding: 0.15em 0.4em;
+  border-radius: 5px;
+}
+.benefits a:hover {
+  -webkit-text-fill-color: #fff;
+}
+.benefits img {
+  width: 40%;
+}
+
 /* metodology styles */
 .metodology {
   margin-top: 8em;
@@ -565,6 +765,28 @@ main h2 {
 }
 
 /* end of metodology styles */
+@media (max-width: 30em) {
+  .trusted ul {
+    padding: 0;
+    margin: 1.5em 0 0 0;
+    gap: 2em;
+  }
+  .trusted ul li:nth-child(2) {
+    order: -1;
+  }
+  .trusted ul li:last-child {
+    display: none;
+  }
+  .trusted .trusted img {
+    scale: 1.25;
+  }
+  .index-main {
+    margin-top: 12em;
+  }
+  .edu-img {
+    display: none;
+  }
+}
 /* sign in styles */
 .sign-body {
   display: flex;
@@ -1049,42 +1271,6 @@ main h2 {
   fill: #fe006b;
 }
 
-.benefits {
-  margin-top: 8em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.benefits div {
-  text-align: center;
-}
-.benefits h2 {
-  font-weight: 600;
-  font-size: 2em;
-}
-.benefits h3 {
-  font-size: 1.25em;
-  margin-bottom: 1em;
-}
-.benefits p {
-  margin-bottom: 0.75em;
-}
-.benefits a {
-  background: linear-gradient(45deg, #fe006b, #ff8800);
-  -webkit-text-fill-color: #212121;
-  -webkit-background-clip: border-box;
-  background-clip: border-box;
-  font-size: 1.25em;
-  font-weight: 600;
-  padding: 0.15em 0.4em;
-  border-radius: 5px;
-}
-.benefits a:hover {
-  -webkit-text-fill-color: #fff;
-}
-.benefits img {
-  width: 40%;
-}
 .benefits-header {
   margin: 3em 0;
   display: flex;
