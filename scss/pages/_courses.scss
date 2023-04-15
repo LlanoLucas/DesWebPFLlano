@@ -1,47 +1,61 @@
+@use "../utils" as u;
+
 .courses-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 4em 3em;
+  @include u.breakpoint(sm) {
+    flex-direction: column;
+    padding: 4em 0;
+    gap: 1em;
+  }
   h1 {
     padding: 0.4em;
     border: 3px solid;
-    border-image: linear-gradient(90deg, #fe006b, #ff8800) 1;
+    border-image: linear-gradient(90deg, u.$main-clr, u.$secondary-clr) 1;
+    @include u.breakpoint(sm) {
+      width: 100%;
+      border-right: none;
+      border-left: none;
+      text-align: center;
+    }
   }
   &__search {
     display: flex;
     gap: 1em;
     align-items: center;
-    button {
-      background-color: inherit;
-      border: none;
-    }
   }
+  button {
+    background-color: inherit;
+    border: none;
+  }
+
   &__search__main {
     display: flex;
-    background-color: #2f2f2f;
+    background-color: u.$light-body-clr;
     padding: 0.5em;
     border-radius: 5px;
     font-size: 1.25em;
-    button svg {
-      fill: #fff;
-      transform: scale(1.4);
-      margin: 0.4em 0.5em;
-      cursor: pointer;
-    }
-    input {
-      background-color: inherit;
-      border: none;
-      color: #fff;
-      &:focus {
-        outline: none;
-      }
+  }
+  button svg {
+    fill: u.$text-clr;
+    transform: scale(1.4);
+    margin: 0.4em 0.5em;
+    cursor: pointer;
+  }
+  input {
+    background-color: inherit;
+    border: none;
+    color: u.$text-clr;
+    &:focus {
+      outline: none;
     }
   }
 }
 
 .bi-filter {
-  fill: #fff;
+  fill: u.$text-clr;
   transform: scale(2);
   margin: 0.5em 0.5em;
   cursor: pointer;
@@ -54,12 +68,22 @@
     justify-content: space-between;
     padding: 1em 3em;
     margin-bottom: 1em;
+    @include u.breakpoint(sm) {
+      padding: 1em 1.5em;
+      margin-bottom: 0;
+    }
     h2 {
       font-size: 2em;
+      @include u.breakpoint(sm) {
+        font-size: 1.75em;
+        font-weight: 600;
+      }
     }
     a {
-      color: #fe006b;
-      font-weight: 400;
+      color: u.$main-clr;
+      @include u.breakpoint(sm) {
+        display: none;
+      }
       &:hover {
         text-decoration: underline;
       }
@@ -71,6 +95,17 @@
     align-items: center;
     justify-content: space-around;
     padding: 0 2em;
+    @include u.breakpoint(sm) {
+      overflow: auto;
+      withe-space: nowrap;
+      width: 300%;
+      gap: 2em;
+      padding: 0 0 0 1.2em;
+      margin-bottom: 1em;
+      .bi-arrow-bar-right {
+        display: none;
+      }
+    }
   }
 }
 
@@ -81,22 +116,25 @@
   display: flex;
   flex-direction: column;
   height: max-content;
-  background: transparent;
-  background-image: linear-gradient(45deg, #212121, #212121),
-    linear-gradient(180deg, #fe006b, #ff8800);
-  background-clip: padding-box, border-box;
-  background-origin: border-box;
-  border: 2px solid transparent;
-  border-radius: 10px;
+  @include u.gradient-border(45deg, u.$main-clr, u.$secondary-clr);
+  @include u.breakpoint(sm) {
+    width: 25em;
+  }
   ul {
     padding: 0.5em 2em 1em 2em;
     display: flex;
     flex-direction: column;
     gap: 0.75em;
+    @include u.breakpoint(sm) {
+      padding: 1em 1em 0 1em;
+    }
     li {
       display: flex;
       align-items: center;
       gap: 0.5em;
+      @include u.breakpoint(sm) {
+        font-size: 1.25em;
+      }
     }
   }
   img {
@@ -121,10 +159,17 @@
       font-weight: 600;
       width: 90%;
       height: 1.75em;
+      @include u.breakpoint(sm) {
+        font-size: 1.5em;
+      }
     }
     svg {
       transform: scale(1.25);
       cursor: pointer;
+      @include u.breakpoint(sm) {
+        scale: 1.5;
+        margin: 0.25em 0.25em 0 0;
+      }
     }
   }
   &__compare {
@@ -140,6 +185,11 @@
       padding: 0.25em 0.5em;
       border: 1px solid;
       border-image: linear-gradient(90deg, #fe006b, #ff8800) 1;
+      text-decoration: none;
+      @include u.breakpoint(sm) {
+        font-size: 1.5;
+        font-weight: 600;
+      }
     }
   }
   &__pricing {
@@ -157,18 +207,46 @@
       border-top-right-radius: 5px;
       border-top-left-radius: 5px;
       font-weight: 600;
+      text-decoration: none;
+      @include u.breakpoint(sm) {
+        font-size: 1.5em;
+        padding: 0.35em 1.5em 0.25em 1.5em;
+      }
     }
     strong {
       font-size: 2em;
       -webkit-text-fill-color: #fff;
       font-weight: 600;
+      @include u.breakpoint(sm) {
+        font-size: 2.25em;
+      }
       &::before {
         content: "U$1500";
         text-decoration: line-through;
         font-size: 0.4em;
         display: block;
+        @include u.breakpoint(sm) {
+          font-size: 0.5em;
+        }
       }
     }
+  }
+}
+
+.all-courses {
+  display: none;
+  @include u.breakpoint(sm) {
+    display: block;
+    color: u.$body-clr;
+    font-weight: 600;
+    text-align: center;
+    font-size: 1.25em;
+    margin: 1.5em auto 2.5em auto;
+    width: 90%;
+    background-color: u.$main-clr;
+    text-decoration: none;
+    text-transform: uppercase;
+    @include u.gradient(235deg, u.$main-clr, u.$secondary-clr);
   }
 }
 
@@ -179,4 +257,7 @@
 
 .bi-patch-check {
   fill: #fe006b;
+  @include u.breakpoint(sm) {
+    scale: 1.25;
+  }
 }

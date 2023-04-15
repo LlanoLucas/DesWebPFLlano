@@ -79,9 +79,6 @@ nav {
     color: #fe006b;
     text-decoration: none;
   }
-  @include u.breakpoint(sm) {
-    color: u.$main-clr;
-  }
 }
 
 .navbar-toggler-icon {
@@ -103,6 +100,7 @@ nav {
       font-size: 1.25em;
     }
   }
+
   .navbar {
     &-collapse {
       margin: 1.5em 0 0.5em 0;
