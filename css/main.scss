@@ -281,11 +281,13 @@ footer {
   }
 }
 
-.f-help, .f-contact {
+.f-help,
+.f-contact {
   text-decoration: none;
 }
 @media (max-width: 30em) {
-  .f-help, .f-contact {
+  .f-help,
+  .f-contact {
     display: none;
   }
 }
@@ -357,7 +359,8 @@ footer svg {
 }
 
 @media (max-width: 30em) {
-  .f-help, .f-contact {
+  .f-help,
+  .f-contact {
     display: none;
   }
 }
@@ -875,7 +878,11 @@ main h2 {
     padding: 0.25em 0;
   }
   .metodology ul li:first-child {
-    background: linear-gradient(135deg, #fe006b, rgba(254, 0, 106, 0.1725490196));
+    background: linear-gradient(
+      135deg,
+      #fe006b,
+      rgba(254, 0, 106, 0.1725490196)
+    );
     -webkit-text-fill-color: #fff;
   }
   .metodology ul li:nth-child(2) {
@@ -1341,7 +1348,6 @@ main h2 {
 @media (max-width: 30em) {
   .courses-body article {
     overflow: auto;
-    withe-space: nowrap;
     width: 300%;
     gap: 2em;
     padding: 0 0 0 1.2em;
@@ -1360,7 +1366,8 @@ main h2 {
   flex-direction: column;
   height: max-content;
   background: transparent;
-  background-image: linear-gradient(45deg, #212121, #212121), linear-gradient(45deg, #fe006b, #ff8800);
+  background-image: linear-gradient(45deg, #212121, #212121),
+    linear-gradient(45deg, #fe006b, #ff8800);
   background-clip: padding-box, border-box;
   background-origin: border-box;
   border: 2px solid transparent;
@@ -1591,7 +1598,8 @@ main h2 {
   width: 35%;
   padding: 0.5rem 1rem;
   background: transparent;
-  background-image: linear-gradient(45deg, #212121, #212121), linear-gradient(180deg, #dc3500, #ff8800);
+  background-image: linear-gradient(45deg, #212121, #212121),
+    linear-gradient(180deg, #dc3500, #ff8800);
   background-clip: padding-box, border-box;
   background-origin: border-box;
   border: 2px solid transparent;
@@ -1752,7 +1760,8 @@ main h2 {
   margin-left: 50%;
   transform: translateX(-50%);
   background: transparent;
-  background-image: linear-gradient(45deg, #212121, #212121), linear-gradient(180deg, #dc3500, #ff8800);
+  background-image: linear-gradient(45deg, #212121, #212121),
+    linear-gradient(180deg, #dc3500, #ff8800);
   background-clip: padding-box, border-box;
   background-origin: border-box;
   border: 2px solid transparent;
@@ -1785,7 +1794,8 @@ main h2 {
   gap: 1em;
   margin: 2em 0 0.5em 0;
   background: transparent;
-  background-image: linear-gradient(45deg, #212121, #212121), linear-gradient(180deg, #dc3500, #ff8800);
+  background-image: linear-gradient(45deg, #212121, #212121),
+    linear-gradient(180deg, #dc3500, #ff8800);
   background-clip: padding-box, border-box;
   background-origin: border-box;
   border: 2px solid transparent;
