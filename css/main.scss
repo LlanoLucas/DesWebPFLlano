@@ -598,7 +598,6 @@ main h2 {
   object-fit: cover;
   justify-self: flex-end;
 }
-
 .education-card {
   border: 1px solid #fe006b;
   width: 35%;
@@ -659,6 +658,7 @@ main h2 {
   justify-content: center;
   align-items: center;
   margin-bottom: 1em;
+  padding: 0;
 }
 @media (max-width: 30em) {
   .education-card ul {
@@ -1865,7 +1865,7 @@ main h2 {
 .about-header {
   height: 12em;
   margin-bottom: 6em;
-  background-image: url(../imgs/background.jpg);
+  background-image: url(../imgs/background.webp);
   background-repeat: repeat-x;
   display: flex;
   align-items: end;

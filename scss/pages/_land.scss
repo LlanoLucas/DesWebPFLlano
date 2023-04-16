@@ -184,68 +184,69 @@ main h2 {
     object-fit: cover;
     justify-self: flex-end;
   }
-}
-
-.education-card {
-  border: 1px solid #fe006b;
-  width: 35%;
-  padding: 1.5em 0;
-  border-radius: 10px;
-  @include u.breakpoint(sm) {
-    width: 90%;
-  }
-  h2 {
-    background: linear-gradient(45deg, #fe006b, #ff8800);
-    color: #212121;
-    font-weight: 600;
-    padding: 0.4em 0;
-    text-align: center;
-    font-size: 2em;
-    margin-bottom: 0.5em;
-  }
-  strong {
-    color: #fe006b;
-    font-size: 1em;
-    font-weight: 600;
-    display: block;
-    text-align: center;
+  &-card {
+    border: 1px solid #fe006b;
+    width: 35%;
+    padding: 1.5em 0;
+    border-radius: 10px;
     @include u.breakpoint(sm) {
+      width: 90%;
+    }
+    h2 {
+      background: linear-gradient(45deg, #fe006b, #ff8800);
+      color: #212121;
+      font-weight: 600;
+      padding: 0.4em 0;
+      text-align: center;
+      font-size: 2em;
+      margin-bottom: 0.5em;
+    }
+    strong {
+      color: #fe006b;
+      font-size: 1em;
+      font-weight: 600;
+      display: block;
+      text-align: center;
+      @include u.breakpoint(sm) {
+        font-size: 1.25em;
+      }
+    }
+    p {
+      padding: 1em 0;
+      text-align: center;
       font-size: 1.25em;
+      margin: 0 2em;
+      @include u.breakpoint(sm) {
+        margin: 0 1em;
+        padding: 0.5em 0;
+      }
     }
-  }
-  p {
-    padding: 1em 0;
-    text-align: center;
-    font-size: 1.25em;
-    margin: 0 2em;
-    @include u.breakpoint(sm) {
-      margin: 0 1em;
-      padding: 0.5em 0;
+    img {
+      width: 4em;
+      filter: grayscale(1);
+      padding: 0.25em;
+      margin: 1em;
+      @include u.breakpoint(sm) {
+        scale: 1.25;
+      }
     }
-  }
-  img {
-    width: 4em;
-    filter: grayscale(1);
-    padding: 0.25em;
-    margin: 1em;
-    @include u.breakpoint(sm) {
-      scale: 1.25;
-    }
-  }
-  ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 1em;
-    @include u.breakpoint(sm) {
+    ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 1em;
       padding: 0;
-      justify-content: space-evenly;
-      li:last-child {
-        display: none;
+      @include u.breakpoint(sm) {
+        padding: 0;
+        justify-content: space-evenly;
+        li:last-child {
+          display: none;
+        }
       }
     }
   }
 }
+
 /* end of education styles */
 
 /* compare styles */
