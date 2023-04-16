@@ -56,10 +56,9 @@
 
 .notification {
   width: 35%;
-  padding: 0.5rem 1rem;
   @include u.gradient-border(180deg, u.$dark-secondary-clr, u.$secondary-clr);
   border-radius: 10px;
-  padding: 2em 1em;
+  padding: 1.5em 1em;
   height: 30em;
   display: flex;
   align-items: space-between;
