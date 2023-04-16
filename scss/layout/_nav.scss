@@ -89,6 +89,11 @@ nav {
   border: 1px solid #fff;
 }
 
+.navbar {
+  position: sticky;
+  z-index: 10;
+}
+
 @include u.breakpoint(sm) {
   .nav-ul {
     flex-direction: column;

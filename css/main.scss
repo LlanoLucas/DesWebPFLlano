@@ -128,6 +128,11 @@ nav ul li a:hover {
   border: 1px solid #fff;
 }
 
+.navbar {
+  position: sticky;
+  z-index: 10;
+}
+
 @media (max-width: 30em) {
   .nav-ul {
     flex-direction: column;
@@ -281,13 +286,11 @@ footer {
   }
 }
 
-.f-help,
-.f-contact {
+.f-help, .f-contact {
   text-decoration: none;
 }
 @media (max-width: 30em) {
-  .f-help,
-  .f-contact {
+  .f-help, .f-contact {
     display: none;
   }
 }
@@ -359,8 +362,7 @@ footer svg {
 }
 
 @media (max-width: 30em) {
-  .f-help,
-  .f-contact {
+  .f-help, .f-contact {
     display: none;
   }
 }
@@ -878,11 +880,7 @@ main h2 {
     padding: 0.25em 0;
   }
   .metodology ul li:first-child {
-    background: linear-gradient(
-      135deg,
-      #fe006b,
-      rgba(254, 0, 106, 0.1725490196)
-    );
+    background: linear-gradient(135deg, #fe006b, rgba(254, 0, 106, 0.1725490196));
     -webkit-text-fill-color: #fff;
   }
   .metodology ul li:nth-child(2) {
@@ -1348,6 +1346,7 @@ main h2 {
 @media (max-width: 30em) {
   .courses-body article {
     overflow: auto;
+    withe-space: nowrap;
     width: 300%;
     gap: 2em;
     padding: 0 0 0 1.2em;
@@ -1366,8 +1365,7 @@ main h2 {
   flex-direction: column;
   height: max-content;
   background: transparent;
-  background-image: linear-gradient(45deg, #212121, #212121),
-    linear-gradient(45deg, #fe006b, #ff8800);
+  background-image: linear-gradient(45deg, #212121, #212121), linear-gradient(45deg, #fe006b, #ff8800);
   background-clip: padding-box, border-box;
   background-origin: border-box;
   border: 2px solid transparent;
@@ -1598,8 +1596,7 @@ main h2 {
   width: 35%;
   padding: 0.5rem 1rem;
   background: transparent;
-  background-image: linear-gradient(45deg, #212121, #212121),
-    linear-gradient(180deg, #dc3500, #ff8800);
+  background-image: linear-gradient(45deg, #212121, #212121), linear-gradient(180deg, #dc3500, #ff8800);
   background-clip: padding-box, border-box;
   background-origin: border-box;
   border: 2px solid transparent;
@@ -1760,8 +1757,7 @@ main h2 {
   margin-left: 50%;
   transform: translateX(-50%);
   background: transparent;
-  background-image: linear-gradient(45deg, #212121, #212121),
-    linear-gradient(180deg, #dc3500, #ff8800);
+  background-image: linear-gradient(45deg, #212121, #212121), linear-gradient(180deg, #dc3500, #ff8800);
   background-clip: padding-box, border-box;
   background-origin: border-box;
   border: 2px solid transparent;
@@ -1794,8 +1790,7 @@ main h2 {
   gap: 1em;
   margin: 2em 0 0.5em 0;
   background: transparent;
-  background-image: linear-gradient(45deg, #212121, #212121),
-    linear-gradient(180deg, #dc3500, #ff8800);
+  background-image: linear-gradient(45deg, #212121, #212121), linear-gradient(180deg, #dc3500, #ff8800);
   background-clip: padding-box, border-box;
   background-origin: border-box;
   border: 2px solid transparent;
@@ -1821,13 +1816,225 @@ main h2 {
 }
 
 .about-header {
-  height: 15em;
-  margin-bottom: 5em;
+  height: 12em;
+  margin-bottom: 6em;
   background-image: url(../imgs/background.jpg);
   background-repeat: repeat-x;
+  display: flex;
+  align-items: end;
+}
+@media (max-width: 30em) {
+  .about-header {
+    height: 10em;
+  }
 }
 .about-header h1 {
   font-size: 2.5em;
+  margin: auto auto 1em 1em;
+  font-weight: 600;
+}
+@media (max-width: 30em) {
+  .about-header h1 {
+    margin: auto auto 0.5em 0.5em;
+    font-size: 2em;
+  }
+}
+
+.purpose-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+@media (max-width: 30em) {
+  .purpose-container {
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+    gap: 0;
+  }
+}
+.purpose h2 {
+  text-align: center;
+  font-weight: 600;
+}
+@media (max-width: 30em) {
+  .purpose h2 {
+    margin-bottom: 0.5em;
+    font-size: 1.75em;
+  }
+}
+.purpose p {
+  text-align: center;
+  font-size: 1.25em;
+  z-index: 5;
+}
+.purpose article {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  justify-content: center;
+}
+@media (max-width: 30em) {
+  .purpose article {
+    width: 100%;
+  }
+}
+.purpose-img {
+  width: 40%;
+  display: flex;
+}
+@media (max-width: 30em) {
+  .purpose-img {
+    width: 100%;
+  }
+}
+.purpose-img img {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  height: 20em;
+}
+@media (max-width: 30em) {
+  .purpose-img img {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+}
+.purpose-img .oval {
+  position: absolute;
+  height: 22em;
+  width: 10em;
+  border-radius: 100%;
+  background-color: #212121;
+  left: 43%;
+  transform: translateX(-50%);
+  transform: translateY(-5%);
+}
+@media (max-width: 30em) {
+  .purpose-img .oval {
+    transform: translateX(0);
+    transform: translateY(-60%);
+    left: 0;
+    width: 100%;
+    height: 15%;
+  }
+}
+
+.experience {
+  width: 80%;
+  margin: 6em auto auto auto;
+}
+@media (max-width: 30em) {
+  .experience {
+    width: 100%;
+  }
+}
+.experience h2 {
+  text-align: right;
+  font-weight: 600;
+}
+@media (max-width: 30em) {
+  .experience h2 {
+    text-align: center;
+    font-size: 1.75em;
+  }
+}
+.experience article {
+  margin-top: 2em;
+  border-right: 4px solid #fe006b;
+  padding: 0.5em 1em;
+  background: transparent;
+  background-image: linear-gradient(45deg, #212121, #212121), linear-gradient(360deg, rgba(254, 0, 107, 0.3137254902), #fe006b);
+  background-clip: padding-box, border-box;
+  background-origin: border-box;
+  border-right: 4px solid transparent;
+}
+@media (max-width: 30em) {
+  .experience article {
+    border-left: 4px solid transparent;
+    border-top: none;
+    padding: 1em;
+    margin-top: 1em;
+  }
+}
+.experience article p {
+  font-size: 1.25em;
+}
+.experience article p:nth-child(2) {
+  margin-bottom: 0;
+}
+.experience img {
+  margin: 4em auto auto auto;
+  width: 100%;
+}
+@media (max-width: 30em) {
+  .experience img {
+    display: none;
+  }
+}
+.experience li {
+  font-size: 1.25em;
+  font-weight: 600;
+  width: fit-content;
+  background: linear-gradient(90deg, #fe006b, #ff8800);
+  -webkit-text-fill-color: transparent;
+  background-clip: content-box;
+  -webkit-background-clip: text;
+}
+.experience ul {
+  margin-bottom: 4em;
+  display: flex;
+  justify-content: space-around;
+}
+@media (max-width: 30em) {
+  .experience ul {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    gap: 1em;
+    margin: 3em 0;
+  }
+  .experience ul::before {
+    content: "You just have to:";
+    display: block;
+    font-size: 1.25em;
+    font-weight: 600;
+    background: #fe006b;
+    color: #212121;
+    margin-bottom: 0.5em;
+    width: 70%;
+    text-align: center;
+  }
+  .experience ul::after {
+    content: "We make it this easy!";
+    margin-top: 0.5em;
+    display: block;
+    font-size: 1.25em;
+    font-weight: 600;
+    background: #fe006b;
+    color: #212121;
+    width: 70%;
+    text-align: center;
+  }
+  .experience ul li {
+    font-size: 1.4em;
+    width: 10em;
+    border-radius: 15px;
+    text-align: center;
+    padding: 0.25em 0;
+  }
+  .experience ul li:first-child {
+    background: linear-gradient(135deg, #fe006b, rgba(254, 0, 106, 0.1725490196));
+    -webkit-text-fill-color: #fff;
+  }
+  .experience ul li:nth-child(2) {
+    background: linear-gradient(45deg, #fe006b, #ff8800);
+    -webkit-text-fill-color: #fff;
+  }
+  .experience ul li:last-child {
+    background: linear-gradient(195deg, #dc3500, #ff8800);
+    -webkit-text-fill-color: #fff;
+  }
 }
 
 /*# sourceMappingURL=main.scss.map */
