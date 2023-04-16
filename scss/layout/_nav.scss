@@ -92,6 +92,34 @@ nav {
 .navbar {
   position: sticky;
   z-index: 10;
+  &-expand-lg {
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    gap: 23%;
+  }
+}
+
+.liked-courses {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  &::before {
+    content: "Liked Courses";
+    display: inline;
+  }
+}
+
+.nav-ul {
+  margin: 0;
+  padding: 0;
+  a {
+    text-decoration: none;
+  }
+}
+
+.navbar-collapse {
+  display: flex;
+  justify-content: space-between;
 }
 
 @include u.breakpoint(sm) {
@@ -109,6 +137,9 @@ nav {
   .navbar {
     &-collapse {
       margin: 1.5em 0 0.5em 0;
+      flex-direction: column;
+      gap: 1.25em;
+      padding-bottom: 1em;
     }
     &-expand-lg {
       padding: 0.5em 1em;
@@ -116,9 +147,8 @@ nav {
       margin-top: 0;
     }
   }
-  .bi-heart::before {
-    content: "Liked courses";
-    color: u.$text-clr;
-    position: relative;
+
+  .liked-courses svg {
+    display: none;
   }
 }

@@ -132,6 +132,34 @@ nav ul li a:hover {
   position: sticky;
   z-index: 10;
 }
+.navbar-expand-lg {
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  gap: 23%;
+}
+
+.liked-courses {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+.liked-courses::before {
+  content: "Liked Courses";
+  display: inline;
+}
+
+.nav-ul {
+  margin: 0;
+  padding: 0;
+}
+.nav-ul a {
+  text-decoration: none;
+}
+
+.navbar-collapse {
+  display: flex;
+  justify-content: space-between;
+}
 
 @media (max-width: 30em) {
   .nav-ul {
@@ -146,16 +174,17 @@ nav ul li a:hover {
   }
   .navbar-collapse {
     margin: 1.5em 0 0.5em 0;
+    flex-direction: column;
+    gap: 1.25em;
+    padding-bottom: 1em;
   }
   .navbar-expand-lg {
     padding: 0.5em 1em;
     position: sticky;
     margin-top: 0;
   }
-  .bi-heart::before {
-    content: "Liked courses";
-    color: #fff;
-    position: relative;
+  .liked-courses svg {
+    display: none;
   }
 }
 footer {
@@ -650,11 +679,6 @@ main h2 {
   .compare {
     margin-top: 6em;
   }
-  .compare h4 {
-    color: #fff;
-    margin: 0;
-    padding: 0;
-  }
 }
 .compare header {
   text-align: center;
@@ -705,10 +729,6 @@ main h2 {
 .table img {
   width: 8em;
 }
-.table h4 {
-  font-size: 1.75em;
-  padding: 0 0 0.5em 5%;
-}
 .table li {
   border-bottom: 2px solid #5f5f5f;
   padding: 1em 1.5em;
@@ -735,6 +755,9 @@ main h2 {
   justify-content: space-evenly;
   align-items: center;
 }
+.compare-tables ul {
+  color: #fff;
+}
 @media (max-width: 30em) {
   .compare-tables {
     flex-direction: column;
@@ -751,6 +774,18 @@ main h2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 1em;
+}
+@media (max-width: 30em) {
+  .table-header {
+    margin-bottom: 0.5em;
+  }
+}
+.table-header h4 {
+  color: #fff;
+  font-size: 1.75em;
+  margin: 0;
+  padding: 0;
 }
 .table-header img {
   object-fit: scale-down;
