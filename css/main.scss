@@ -1610,7 +1610,8 @@ main h2 {
 @media (max-width: 30em) {
   .notification {
     width: 90%;
-    height: 35em;
+    height: 35.5em;
+    padding: 1.5em 1em;
   }
   .notification strong {
     font-size: 1.25em;
@@ -1656,15 +1657,17 @@ main h2 {
   text-align: center;
   padding: 0.25em;
   text-align: center;
-}
-.news h2,
-.news strong {
   font-size: 1.25em;
   font-weight: 400;
   background: linear-gradient(90deg, #fe006b, #ff8800);
   -webkit-text-fill-color: transparent;
   background-clip: content-box;
   -webkit-background-clip: text;
+}
+@media (max-width: 30em) {
+  .news-title {
+    margin: 0;
+  }
 }
 
 .second-subscribe {
