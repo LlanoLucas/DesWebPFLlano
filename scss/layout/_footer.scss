@@ -10,6 +10,7 @@ footer {
   margin-bottom: 4em;
   @include u.breakpoint(sm) {
     width: 90%;
+    margin-bottom: 0;
   }
   h2 {
     font-size: 1.75em;

@@ -98,12 +98,17 @@
     @include u.breakpoint(sm) {
       overflow: auto;
       withe-space: nowrap;
-      width: 300%;
-      gap: 2em;
-      padding: 0 0 0 1.2em;
+      width: 100%;
+      padding: 0 1em 0 1em;
       margin-bottom: 1em;
       .bi-arrow-bar-right {
         display: none;
+      }
+      .course-card {
+        &-2,
+        &-3 {
+          display: none;
+        }
       }
     }
   }

@@ -109,16 +109,25 @@
     text-align: center;
     padding: 0.25em;
     text-align: center;
-    font-size: 1.25em;
+    font-size: 1em;
     font-weight: 400;
     background: linear-gradient(90deg, #fe006b, #ff8800);
     -webkit-text-fill-color: transparent;
     background-clip: content-box;
     -webkit-background-clip: text;
-    @include u.breakpoint(sm) {
-      margin: 0;
-    }
   }
+}
+
+.b-news-title {
+  font-size: 1.25em;
+  font-weight: 400;
+  background: linear-gradient(90deg, #fe006b, #ff8800);
+  -webkit-text-fill-color: transparent;
+  background-clip: content-box;
+  -webkit-background-clip: text;
+  display: block;
+  text-align: center;
+  padding: 0.25em;
 }
 
 .second-subscribe {
