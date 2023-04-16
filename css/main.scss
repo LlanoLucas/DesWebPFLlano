@@ -2046,10 +2046,10 @@ main h2 {
     display: block;
     font-size: 1.25em;
     font-weight: 600;
-    background: #fe006b;
-    color: #212121;
+    color: #fff;
     margin-bottom: 0.5em;
-    width: 70%;
+    border-bottom: 2px solid #fe006b;
+    padding: 0.25em 0;
     text-align: center;
   }
   .experience ul::after {
