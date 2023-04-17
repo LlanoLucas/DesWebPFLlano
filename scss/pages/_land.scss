@@ -26,12 +26,67 @@ main h2 {
   font-weight: 400;
 }
 
+@keyframes rotation {
+  0% {
+    background: linear-gradient(0deg, u.$main-clr, u.$secondary-clr);
+    -webkit-text-fill-color: transparent;
+    background-clip: content-box;
+    -webkit-background-clip: text;
+  }
+  12% {
+    background: linear-gradient(45deg, u.$main-clr, u.$secondary-clr);
+    -webkit-text-fill-color: transparent;
+    background-clip: content-box;
+    -webkit-background-clip: text;
+  }
+  25% {
+    background: linear-gradient(90deg, u.$main-clr, u.$secondary-clr);
+    -webkit-text-fill-color: transparent;
+    background-clip: content-box;
+    -webkit-background-clip: text;
+  }
+  37% {
+    background: linear-gradient(135deg, u.$main-clr, u.$secondary-clr);
+    -webkit-text-fill-color: transparent;
+    background-clip: content-box;
+    -webkit-background-clip: text;
+  }
+  50% {
+    background: linear-gradient(180deg, u.$main-clr, u.$secondary-clr);
+    -webkit-text-fill-color: transparent;
+    background-clip: content-box;
+    -webkit-background-clip: text;
+  }
+  62% {
+    background: linear-gradient(225deg, u.$main-clr, u.$secondary-clr);
+    -webkit-text-fill-color: transparent;
+    background-clip: content-box;
+    -webkit-background-clip: text;
+  }
+  75% {
+    background: linear-gradient(270deg, u.$main-clr, u.$secondary-clr);
+    -webkit-text-fill-color: transparent;
+    background-clip: content-box;
+    -webkit-background-clip: text;
+  }
+  87% {
+    background: linear-gradient(315deg, u.$main-clr, u.$secondary-clr);
+    -webkit-text-fill-color: transparent;
+    background-clip: content-box;
+    -webkit-background-clip: text;
+  }
+  100% {
+    background: linear-gradient(360deg, u.$main-clr, u.$secondary-clr);
+    -webkit-text-fill-color: transparent;
+    background-clip: content-box;
+    -webkit-background-clip: text;
+  }
+}
+
 .bold {
-  background: linear-gradient(45deg, #fe006b, #ff8800);
   font-weight: 600;
   -webkit-text-fill-color: transparent;
-  background-clip: content-box;
-  -webkit-background-clip: text;
+  animation: rotation 0.9s infinite ease-in-out;
 }
 
 .index-header {
@@ -50,6 +105,7 @@ main h2 {
     color: u.$main-clr;
     font-weight: 600;
     font-size: 1.25em;
+    text-decoration: none;
     &:hover {
       text-decoration: underline;
     }
