@@ -97,7 +97,6 @@
     padding: 0 2em;
     @include u.breakpoint(sm) {
       overflow: auto;
-      withe-space: nowrap;
       width: 100%;
       padding: 0 1em 0 1em;
       margin-bottom: 1em;
