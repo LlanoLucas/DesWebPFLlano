@@ -1,0 +1,270 @@
+@use "../utils" as u;
+
+.benefits {
+  &-header {
+    margin: 3em 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    @include u.breakpoint(sm) {
+      margin-top: 4em;
+      align-items: center;
+    }
+  }
+  &-main {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 5%;
+    @include u.breakpoint(sm) {
+      flex-direction: column;
+      align-items: center;
+      padding: 0;
+      gap: 16em;
+    }
+  }
+  &-body {
+    h1 {
+      font-weight: 600;
+      width: fit-content;
+      line-height: 1em;
+      @include u.gradient(180deg, u.$dark-secondary-clr, u.$secondary-clr);
+      -webkit-text-fill-color: transparent;
+      background-clip: content-box;
+      -webkit-background-clip: text;
+      align-self: center;
+      padding: 0;
+    }
+    h2 {
+      font-weight: 600;
+      font-size: 1.25em;
+      @include u.breakpoint(sm) {
+        width: 80%;
+        font-weight: 400;
+      }
+    }
+    @include u.breakpoint(sm) {
+      footer {
+        margin-top: 10em;
+        svg {
+          scale: 1.75;
+        }
+      }
+    }
+  }
+}
+
+.notification {
+  width: 35%;
+  @include u.gradient-border(180deg, u.$dark-secondary-clr, u.$secondary-clr);
+  border-radius: 10px;
+  padding: 1.5em 1em;
+  height: 30em;
+  display: flex;
+  align-items: space-between;
+  justify-content: center;
+  @include u.breakpoint(sm) {
+    width: 90%;
+    height: 35.5em;
+    padding: 1.5em 1em;
+    strong {
+      font-size: 1.25em;
+      padding-top: 1em;
+      width: 15em;
+    }
+  }
+  h3 {
+    font-size: 1.5em;
+    font-weight: 600;
+    width: 100%;
+    @include u.breakpoint(sm) {
+      text-align: center;
+      margin-bottom: 1em;
+      font-size: 1.5em;
+    }
+  }
+  &__container {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    article {
+      width: 80%;
+      line-height: 1.75em;
+      @include u.breakpoint(sm) {
+        width: 100%;
+        text-align: center;
+      }
+    }
+    input:focus {
+      outline: 1px solid u.$focus-clr;
+    }
+  }
+}
+
+.news {
+  &-title {
+    display: block;
+    text-align: center;
+    padding: 0.25em;
+    text-align: center;
+    font-size: 1em;
+    font-weight: 400;
+    background: linear-gradient(90deg, #fe006b, #ff8800);
+    -webkit-text-fill-color: transparent;
+    background-clip: content-box;
+    -webkit-background-clip: text;
+  }
+}
+
+.b-news-title {
+  font-size: 1.25em;
+  font-weight: 400;
+  background: linear-gradient(90deg, #fe006b, #ff8800);
+  -webkit-text-fill-color: transparent;
+  background-clip: content-box;
+  -webkit-background-clip: text;
+  display: block;
+  text-align: center;
+  padding: 0.25em;
+}
+
+.second-subscribe {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 0.5em;
+  @include u.breakpoint(sm) {
+    flex-direction: column;
+  }
+}
+
+.b {
+  &-mail {
+    background-color: u.$light-body-clr;
+    border: none;
+    padding: 1em;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    display: inline;
+    color: u.$text-clr;
+    @include u.breakpoint(sm) {
+      border-radius: 5px;
+    }
+  }
+
+  &-subscribe {
+    @include u.gradient(90deg, u.$dark-secondary-clr, u.$secondary-clr);
+    border: none;
+    padding: 1em;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    display: inline;
+    @include u.breakpoint(sm) {
+      border-radius: 5px;
+      font-weight: 600;
+      input:focus {
+        outline: 1px solid #ff2f00;
+      }
+    }
+  }
+}
+
+.accordion-button {
+  font-weight: 400;
+}
+
+.coupon {
+  width: 55%;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  @include u.gradient(45deg, u.$main-clr, u.$secondary-clr);
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  height: 20em;
+  @include u.breakpoint(sm) {
+    width: 90%;
+    border-radius: 10px;
+  }
+  &__header {
+    padding: 2em;
+    p {
+      font-size: 1.6em;
+      font-weight: 600;
+      color: u.$body-clr;
+      @include u.breakpoint(sm) {
+        font-size: 1.5em;
+      }
+    }
+    a {
+      display: block;
+      text-align: end;
+      margin-right: 2em;
+      color: u.$body-clr;
+      font-weight: 600;
+      @include u.breakpoint(sm) {
+        margin: 0;
+        font-size: 1.1em;
+      }
+    }
+  }
+  &__container {
+    width: 70%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    @include u.gradient-border(180deg, u.$dark-secondary-clr, u.$secondary-clr);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    justify-content: center;
+    @include u.breakpoint(sm) {
+      width: 90%;
+    }
+    p {
+      font-size: 1.1em;
+      font-weight: 600;
+      width: 80%;
+      text-align: center;
+      padding-bottom: 1.5em;
+    }
+  }
+  &-copy {
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    font-size: 1.75em;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    margin: 2em 0 0.5em 0;
+    @include u.gradient-border(180deg, u.$dark-secondary-clr, u.$secondary-clr);
+    border-radius: 10px;
+    cursor: pointer;
+    @include u.breakpoint(sm) {
+      width: 90%;
+      margin-top: 0.5em;
+      justify-content: center;
+      gap: 0.5em;
+    }
+    strong {
+      padding: 0.5em 0;
+      font-weight: 600;
+    }
+    svg {
+      scale: 2.5;
+      width: 1.25em;
+      fill: u.$secondary-clr;
+    }
+  }
+}
+
+@include u.breakpoint(sm) {
+  .accordion {
+    h2 {
+      width: 100%;
+    }
+  }
+}

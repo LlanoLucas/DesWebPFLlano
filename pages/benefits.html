@@ -4,20 +4,28 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="../imgs/icon.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="../imgs/icon.webp" type="image/x-icon" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="../styles/styles.css" />
-    <title>Benefits - Codesearch</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <title>Benefits | Codesearch</title>
+    <meta
+      name="description"
+      content="Learn with benefits, make your money worth!"
+    />
+    <meta
+      name="keywords"
+      content="benefits, discount, coupon, sale, deal, codesearch, code, technology, job, course, programming, developer, it, ai, career"
+    />
   </head>
   <body class="benefits-body">
     <nav class="navbar navbar-expand-lg">
       <a href="../index.html">
-        <img src="../imgs/logo.png" class="logo" alt="CodeSearch" />
+        <img src="../imgs/logo.webp" class="logo" alt="CodeSearch" />
       </a>
       <button
         class="navbar-toggler collapsed"
@@ -33,19 +41,19 @@
       <div class="navbar-collapse collapse" id="navbarSupportedContent">
         <ul class="nav-ul">
           <li>
-            <a href="courses.html">Courses</a>
+            <a href="courses.html" class="c-hover">Courses</a>
           </li>
           <li>
             <a href="benefits.html" class="benefits-nav">Benefits</a>
           </li>
           <li>
-            <a href="about.html">About Us</a>
+            <a href="about.html" class="a-hover">About Us</a>
           </li>
         </ul>
 
         <ul class="nav-ul">
           <li>
-            <a href="#">
+            <a class="liked-courses" href="#">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -116,13 +124,14 @@
         <div class="notification__container">
           <h3>Be notified when courses are on sale!</h3>
           <article>
-            There are always new deals and discounts on the courses we promote,
-            so make sure to subscribe to our newsletter so you dont miss any
-            offer. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Voluptate, ratione totam? Molestias voluptatem voluptates at.
+            Subscribe to our newsletter for exclusive deals on our promoted
+            courses! Stay updated and never miss out on special promotions or
+            discounts. Join now to enhance your learning journey at a discounted
+            price! Don't miss out on special promotions or limited-time
+            discounts. Join now!
           </article>
           <div class="news-benefits">
-            <strong class="news-title">Subscribe to our Newsletter:</strong>
+            <strong class="b-news-title">Subscribe to our Newsletter:</strong>
             <div class="second-subscribe">
               <input type="email" placeholder="enter email" class="b-mail" />
               <input type="submit" value="Subscribe" class="b-subscribe" />
@@ -135,16 +144,103 @@
     <footer>
       <section class="faqs">
         <h2>Frequently Asqued Questions:</h2>
-        <ul>
-          <li>How does this website work?</li>
-          <li>Are this courses made from CodeSearch?</li>
-          <li>Do I get a benefit by searching courses in CodeSearch?</li>
-        </ul>
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseOne"
+                aria-expanded="false"
+                aria-controls="flush-collapseOne"
+              >
+                How does this website work?
+              </button>
+            </h2>
+            <div
+              id="flush-collapseOne"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div class="accordion-body">
+                We curate a comprehensive list of the best courses available in
+                technology fields to ensure that students make informed
+                decisions and get the best value for their money. Our promoted
+                courses are constantly updated to provide the latest offerings.
+                <br />In addition, our platform allows you to compare courses
+                and evaluate their unique characteristics, empowering you to
+                make an informed decision that aligns with your specific needs
+                and goals. We understand that choosing the right course is
+                essential, and we provide you with the necessary tools to make
+                the best decision for your educational journey.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseTwo"
+                aria-expanded="false"
+                aria-controls="flush-collapseTwo"
+              >
+                Are this courses made from CodeSearch?
+              </button>
+            </h2>
+            <div
+              id="flush-collapseTwo"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div class="accordion-body">
+                To clarify, while these courses are not created by CodeSearch,
+                they are carefully selected by our team to ensure that they meet
+                our high standards for quality and relevance. We believe in
+                providing our users with access to the best courses available,
+                and we take pride in curating a comprehensive list of options
+                that meet their unique needs and interests.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseThree"
+                aria-expanded="false"
+                aria-controls="flush-collapseThree"
+              >
+                Do I get a benefit by searching courses in CodeSearch?
+              </button>
+            </h2>
+            <div
+              id="flush-collapseThree"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div class="accordion-body">
+                Our platform not only offers you access to the best courses
+                available, but we also provide you with exclusive coupons and
+                discount codes to ensure that you get the most value for your
+                money. Moreover, we keep you updated on any ongoing sales or
+                promotions, so you never miss out on an opportunity to save. We
+                understand the importance of affordability and accessibility
+                when it comes to education, and we are committed to making sure
+                our users get the best deals possible.
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section class="bottom">
         <ul class="main-ul">
-          <li class="help">
+          <li class="f-help">
             <a href="#">Help</a>
           </li>
           <li class="footer-title">CODESEARCH</li>
@@ -202,7 +298,11 @@
             </ul>
           </li>
           <li class="contact">
-            <a href="https://mail.google.com/mail/" target="_blank">
+            <a
+              href="https://mail.google.com/mail/"
+              target="_blank"
+              class="f-contact"
+            >
               Contact
             </a>
           </li>

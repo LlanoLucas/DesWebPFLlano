@@ -1,0 +1,203 @@
+@use "../utils" as u;
+
+.about-header {
+  height: 12em;
+  margin-bottom: 6em;
+  background-image: url(../imgs/background.webp);
+  background-repeat: repeat-x;
+  display: flex;
+  align-items: end;
+  @include u.breakpoint(sm) {
+    height: 10em;
+  }
+  h1 {
+    font-size: 2.5em;
+    margin: auto auto 1em 1em;
+    font-weight: 600;
+    @include u.breakpoint(sm) {
+      margin: auto auto 0.5em 0.5em;
+      font-size: 2em;
+    }
+  }
+}
+
+.purpose {
+  &-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    @include u.breakpoint(sm) {
+      flex-direction: column;
+      width: 90%;
+      margin: auto;
+      gap: 0;
+    }
+  }
+  h2 {
+    text-align: center;
+    font-weight: 600;
+    @include u.breakpoint(sm) {
+      margin-bottom: 0.5em;
+      font-size: 1.75em;
+    }
+  }
+  p {
+    text-align: center;
+    font-size: 1.25em;
+    z-index: 5;
+  }
+
+  article {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    justify-content: center;
+    @include u.breakpoint(sm) {
+      width: 100%;
+    }
+  }
+  &-img {
+    width: 40%;
+    display: flex;
+    @include u.breakpoint(sm) {
+      width: 100%;
+    }
+    img {
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      height: 20em;
+      @include u.breakpoint(sm) {
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+    }
+    .oval {
+      position: absolute;
+      height: 22em;
+      width: 10em;
+      border-radius: 100%;
+      background-color: u.$body-clr;
+      left: 43%;
+      transform: translateX(-50%);
+      transform: translateY(-5%);
+      @include u.breakpoint(sm) {
+        transform: translateX(0);
+        transform: translateY(-60%);
+        left: 0;
+        width: 100%;
+        height: 15%;
+      }
+    }
+  }
+}
+
+.experience {
+  width: 80%;
+  margin: 6em auto auto auto;
+  @include u.breakpoint(sm) {
+    width: 100%;
+  }
+  h2 {
+    text-align: right;
+    font-weight: 600;
+    @include u.breakpoint(sm) {
+      text-align: center;
+      font-size: 1.75em;
+    }
+  }
+  article {
+    margin-top: 2em;
+    border-right: 4px solid u.$main-clr;
+    padding: 0.5em 1em;
+    background: transparent;
+    background-image: linear-gradient(45deg, #212121, #212121),
+      linear-gradient(360deg, u.$transparent-main-clr, u.$main-clr);
+    background-clip: padding-box, border-box;
+    background-origin: border-box;
+    border-right: 4px solid transparent;
+    @include u.breakpoint(sm) {
+      border-left: 4px solid transparent;
+      border-top: none;
+      padding: 1em;
+      margin-top: 1em;
+    }
+    p {
+      font-size: 1.25em;
+      &:nth-child(2) {
+        margin-bottom: 0;
+      }
+    }
+  }
+  img {
+    margin: 4em auto auto auto;
+    width: 100%;
+    @include u.breakpoint(sm) {
+      display: none;
+    }
+  }
+  li {
+    font-size: 1.25em;
+    font-weight: 600;
+    width: fit-content;
+    background: linear-gradient(90deg, #fe006b, #ff8800);
+    -webkit-text-fill-color: transparent;
+    background-clip: content-box;
+    -webkit-background-clip: text;
+  }
+  ul {
+    margin-bottom: 4em;
+    display: flex;
+    justify-content: space-around;
+    @include u.breakpoint(sm) {
+      flex-direction: column;
+      align-items: center;
+      padding: 0;
+      gap: 1em;
+      margin: 3em 0;
+      &::before {
+        content: "You just have to:";
+        display: block;
+        font-size: 1.25em;
+        font-weight: 600;
+        color: u.$text-clr;
+        margin-bottom: 0.5em;
+        border-bottom: 2px solid u.$main-clr;
+        padding: 0.25em 0;
+        text-align: center;
+      }
+      &::after {
+        content: "We make it this easy!";
+        margin-top: 0.5em;
+        display: block;
+        font-size: 1.25em;
+        font-weight: 600;
+        color: u.$text-clr;
+        width: max-content;
+        text-align: center;
+        padding: 0.25em 0.5em;
+        border: 2px solid u.$main-clr;
+      }
+
+      li {
+        font-size: 1.4em;
+        width: 10em;
+        border-radius: 15px;
+        text-align: center;
+        padding: 0.25em 0;
+        &:first-child {
+          background: linear-gradient(135deg, #fe006b, #fe006a2c);
+          -webkit-text-fill-color: #fff;
+        }
+        &:nth-child(2) {
+          background: linear-gradient(45deg, #fe006b, #ff8800);
+          -webkit-text-fill-color: #fff;
+        }
+        &:last-child {
+          background: linear-gradient(195deg, #dc3500, #ff8800);
+          -webkit-text-fill-color: #fff;
+        }
+      }
+    }
+  }
+}
