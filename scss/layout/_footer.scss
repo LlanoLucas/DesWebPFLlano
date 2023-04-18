@@ -4,6 +4,20 @@ footer {
   margin-top: 10em;
 }
 
+.faqs {
+  width: 80%;
+  margin: auto;
+  margin-bottom: 4em;
+  @include u.breakpoint(sm) {
+    width: 90%;
+    margin-bottom: 0;
+  }
+  h2 {
+    font-size: 1.75em;
+    font-weight: 400;
+  }
+}
+
 .accordion {
   margin-top: 2em;
   --bs-body-bg: u.$body-clr;
@@ -18,20 +32,6 @@ footer {
 
 .accordion-button:focus {
   box-shadow: none;
-}
-
-.faqs {
-  width: 80%;
-  margin: auto;
-  margin-bottom: 4em;
-  @include u.breakpoint(sm) {
-    width: 90%;
-    margin-bottom: 0;
-  }
-  h2 {
-    font-size: 1.75em;
-    font-weight: 400;
-  }
 }
 
 .news {

@@ -260,3 +260,11 @@
     }
   }
 }
+
+@include u.breakpoint(sm) {
+  .accordion {
+    h2 {
+      width: 100%;
+    }
+  }
+}
