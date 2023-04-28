@@ -158,8 +158,16 @@ main h2 {
     justify-content: space-between;
     align-items: center;
     gap: 2.5em;
+    @include u.breakpoint(sm) {
+      padding-right: 1em !important;
+      padding-left: 1em !important;
+    }
     img {
       width: 6em;
+      @include u.breakpoint(lg) {
+        width: 8em;
+        margin-bottom: 2em;
+      }
     }
   }
 }
@@ -168,6 +176,9 @@ main h2 {
   font-size: 1.25em;
   display: block;
   text-align: center;
+  @include u.breakpoint(lg) {
+    font-size: 1.5em;
+  }
 }
 
 /* header right */
@@ -190,6 +201,11 @@ main h2 {
       order: -1;
       display: block;
       text-align: center;
+    }
+    img {
+      @include u.breakpoint(lg) {
+        width: 100%;
+      }
     }
   }
 }
