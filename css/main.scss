@@ -162,6 +162,11 @@ nav ul li a:hover {
   padding-right: 1.5em;
   gap: 23%;
 }
+@media (max-width: 75em) {
+  .navbar-expand-lg {
+    gap: 15%;
+  }
+}
 
 .liked-courses {
   display: flex;
@@ -207,6 +212,7 @@ nav ul li a:hover {
     padding: 0.5em 1em;
     position: sticky;
     margin-top: 0;
+    flex-wrap: nowrap;
   }
   .liked-courses svg {
     display: none;
@@ -256,9 +262,10 @@ footer {
   margin: auto;
   margin-top: 2em;
 }
-@media (max-width: 36em) {
+@media (max-width: 62em) {
   .news {
     flex-direction: column;
+    margin-top: 3em;
   }
 }
 .news-title {
@@ -295,13 +302,25 @@ footer {
   border: none;
   padding: 0.75em;
   border-radius: 5px;
-  width: 18em;
+  width: 100%;
   color: #fff;
   font-size: 1em;
 }
-@media (max-width: 36em) {
+@media (max-width: 62em) {
   .mail {
     font-size: 1.1em;
+    width: 18em;
+  }
+}
+
+.subscribe-div {
+  display: flex;
+  width: 50%;
+}
+@media (max-width: 62em) {
+  .subscribe-div {
+    flex-direction: column;
+    width: 18em;
   }
 }
 
@@ -318,7 +337,7 @@ footer {
 .subscribe:hover {
   scale: 1.03;
 }
-@media (max-width: 36em) {
+@media (max-width: 62em) {
   .subscribe {
     width: 18em;
     margin: 0.75em 0 0 0;
@@ -455,6 +474,11 @@ footer svg:hover {
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 75em) {
+  .index-section-left {
+    width: 100%;
+  }
+}
 @media (max-width: 36em) {
   .index-section-left {
     width: 100%;
@@ -469,6 +493,20 @@ footer svg:hover {
 h1 {
   font-size: 2.5em;
   font-weight: 400;
+}
+@media (max-width: 75em) {
+  h1 {
+    display: block;
+    margin: 0;
+    text-align: center;
+    margin-bottom: 0.4em;
+  }
+}
+@media (max-width: 36em) {
+  h1 h1 {
+    margin: 1.5em auto 0.4em auto;
+    text-align: center;
+  }
 }
 
 main h2 {
@@ -546,15 +584,20 @@ main h2 {
   display: flex;
   height: 90vh;
 }
-@media (max-width: 36em) {
+@media (max-width: 75em) {
   .index-header {
     flex-direction: column;
     width: 100%;
     align-items: center;
+    margin-top: 5em;
   }
-  .index-header h1 {
-    margin: 1.5em auto 0.4em auto;
-    text-align: center;
+}
+@media (max-width: 36em) {
+  .index-header {
+    margin-top: 4em;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
   }
 }
 .index-header a {
@@ -566,8 +609,22 @@ main h2 {
 .index-header a:hover {
   text-decoration: underline;
 }
+@media (max-width: 75em) {
+  .index-header a {
+    display: block;
+    width: 80%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.5em;
+    background-color: #fe006b;
+    color: #212121;
+  }
+}
 @media (max-width: 36em) {
   .index-header a {
+    width: 100%;
     display: block;
     text-align: center;
     text-decoration: none;
@@ -699,6 +756,13 @@ main h2 {
   display: flex;
   justify-content: space-evenly;
 }
+@media (max-width: 62em) {
+  .education {
+    flex-direction: column;
+    align-items: center;
+    gap: 3em;
+  }
+}
 @media (max-width: 36em) {
   .education {
     margin-top: 6em;
@@ -709,11 +773,27 @@ main h2 {
   object-fit: cover;
   justify-self: flex-end;
 }
+@media (max-width: 75em) {
+  .education img {
+    width: 30%;
+    object-fit: cover;
+  }
+}
+@media (max-width: 62em) {
+  .education img {
+    width: 75%;
+  }
+}
 .education-card {
   border: 1px solid #fe006b;
   width: 35%;
   padding: 1.5em 0;
   border-radius: 10px;
+}
+@media (max-width: 62em) {
+  .education-card {
+    width: 50%;
+  }
 }
 @media (max-width: 36em) {
   .education-card {
@@ -886,6 +966,7 @@ main h2 {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1em;
+  height: 3em;
 }
 @media (max-width: 36em) {
   .table-header {
@@ -1059,6 +1140,11 @@ main h2 {
 }
 
 /* end of metodology styles */
+@media (max-width: 75em) {
+  .index-main {
+    margin-top: 8em;
+  }
+}
 @media (max-width: 36em) {
   .trusted ul {
     padding: 0;
@@ -1491,9 +1577,16 @@ main h2 {
   justify-content: space-around;
   padding: 0 2em;
 }
+@media (max-width: 62em) {
+  .courses-body article .course-card {
+    width: 40%;
+  }
+  .courses-body article .course-card-3 {
+    display: none;
+  }
+}
 @media (max-width: 36em) {
   .courses-body article {
-    overflow: auto;
     width: 100%;
     padding: 0 1em 0 1em;
     margin-bottom: 1em;
@@ -1521,7 +1614,7 @@ main h2 {
 }
 @media (max-width: 36em) {
   .course-card {
-    width: 25em;
+    width: 25em !important;
   }
 }
 .course-card ul {

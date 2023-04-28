@@ -95,8 +95,15 @@
     align-items: center;
     justify-content: space-around;
     padding: 0 2em;
+    @include u.breakpoint(lg) {
+      .course-card {
+        width: 40%;
+        &-3 {
+          display: none;
+        }
+      }
+    }
     @include u.breakpoint(sm) {
-      overflow: auto;
       width: 100%;
       padding: 0 1em 0 1em;
       margin-bottom: 1em;
@@ -122,7 +129,7 @@
   height: max-content;
   @include u.gradient-border(45deg, u.$main-clr, u.$secondary-clr);
   @include u.breakpoint(sm) {
-    width: 25em;
+    width: 25em !important;
   }
   ul {
     padding: 0.5em 2em 1em 2em;

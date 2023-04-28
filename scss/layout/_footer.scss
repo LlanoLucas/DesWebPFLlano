@@ -41,8 +41,9 @@ footer {
   width: 70%;
   margin: auto;
   margin-top: 2em;
-  @include u.breakpoint(sm) {
+  @include u.breakpoint(lg) {
     flex-direction: column;
+    margin-top: 3em;
   }
   &-title {
     text-align: center;
@@ -77,11 +78,21 @@ footer {
   border: none;
   padding: 0.75em;
   border-radius: 5px;
-  width: 18em;
+  width: 100%;
   color: #fff;
   font-size: 1em;
-  @include u.breakpoint(sm) {
+  @include u.breakpoint(lg) {
     font-size: 1.1em;
+    width: 18em;
+  }
+}
+
+.subscribe-div {
+  display: flex;
+  width: 50%;
+  @include u.breakpoint(lg) {
+    flex-direction: column;
+    width: 18em;
   }
 }
 
@@ -97,7 +108,7 @@ footer {
   &:hover {
     scale: 1.03;
   }
-  @include u.breakpoint(sm) {
+  @include u.breakpoint(lg) {
     width: 18em;
     margin: 0.75em 0 0 0;
     font-size: 1.1em;
