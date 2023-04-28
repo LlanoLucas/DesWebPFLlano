@@ -93,6 +93,10 @@ footer {
   color: #fff;
   cursor: pointer;
   margin-left: 0.25em;
+  transition: all 300ms ease-in-out;
+  &:hover {
+    scale: 1.03;
+  }
   @include u.breakpoint(sm) {
     width: 18em;
     margin: 0.75em 0 0 0;
@@ -124,7 +128,11 @@ footer {
   &-help,
   &-contact {
     text-decoration: none;
-    @include u.breakpoint(sm) {
+    transition: all 300ms ease-in-out;
+    &:hover {
+      color: u.$main-clr;
+    }
+    @include u.breakpoint(lg) {
       display: none;
     }
   }
@@ -150,6 +158,10 @@ footer svg {
   fill: #fe006b;
   object-fit: fill;
   scale: 1.25;
+  transition: all 300ms ease-in-out;
+  &:hover {
+    scale: 1.35;
+  }
   @include u.breakpoint(sm) {
     scale: 1.5;
   }

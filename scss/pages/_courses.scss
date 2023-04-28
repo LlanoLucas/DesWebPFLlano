@@ -190,6 +190,10 @@
       border: 1px solid;
       border-image: linear-gradient(90deg, #fe006b, #ff8800) 1;
       text-decoration: none;
+      transition: all 300ms ease-in-out;
+      &:hover {
+        scale: 1.03;
+      }
       @include u.breakpoint(sm) {
         font-size: 1.5;
         font-weight: 600;
@@ -212,6 +216,10 @@
       border-top-left-radius: 5px;
       font-weight: 600;
       text-decoration: none;
+      transition: all 300ms ease-in-out;
+      &:hover {
+        padding: 0.5em 2.1em 0.25em 2.1em;
+      }
       @include u.breakpoint(sm) {
         font-size: 1.5em;
         padding: 0.35em 1.5em 0.25em 1.5em;

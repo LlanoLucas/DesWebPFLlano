@@ -1,6 +1,8 @@
 $breakpoints: (
-  "sm": 30em,
-  "md": 43.75,
+  "sm": 36em,
+  "md": 48em,
+  "lg": 62em,
+  "xlg": 75em,
 );
 
 @mixin breakpoint($size) {

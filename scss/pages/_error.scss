@@ -1,0 +1,139 @@
+@use "../utils" as u;
+
+.error-body {
+  background-color: u.$dark-body-clr;
+  display: flex;
+  img {
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    width: 20%;
+  }
+  @include u.breakpoint(sm) {
+    background-color: u.$body-clr;
+    img {
+      width: 60%;
+      margin-left: 50%;
+      transform: translateX(-50%);
+      left: 0;
+    }
+  }
+}
+
+.error-main {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  padding: 5em 5em;
+  background-color: u.$body-clr;
+  width: 70%;
+  border-radius: 0.75em;
+  gap: 3em;
+  height: 100%;
+  margin-top: auto;
+  @include u.breakpoint(xlg) {
+    width: 80%;
+    padding: 3em 4em;
+  }
+  @include u.breakpoint(lg) {
+    flex-direction: column-reverse;
+    padding: 2em 0.5em;
+    gap: 2em;
+  }
+  @include u.breakpoint(sm) {
+    flex-direction: column-reverse;
+    align-items: center;
+    width: 100%;
+    padding: 3em 0 5em 0;
+    gap: 3em;
+    border-radius: 0;
+    border-bottom: 1px solid u.$line-clr;
+  }
+}
+
+.error-left {
+  width: 40%;
+  @include u.breakpoint(lg) {
+    width: max-content;
+    justify-content: center;
+  }
+  @include u.breakpoint(sm) {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.error-card {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  @include u.breakpoint(lg) {
+    width: max-content;
+  }
+  @include u.breakpoint(sm) {
+    font-size: 0.9em;
+    width: 90%;
+  }
+  h1 {
+    text-align: center;
+    margin-top: 0.25em;
+    padding-bottom: 0.25em;
+    @include u.gradient-border(45deg, u.$main-clr, u.$secondary-clr);
+    border: none;
+    border-bottom: 2px solid transparent;
+    color: #ffffff75;
+    font-size: 2.75em;
+  }
+  ul {
+    padding: 1em 2em;
+    margin-bottom: 0.5em;
+    font-size: 1.15em;
+    gap: 0.75em;
+  }
+}
+
+.error-right {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  h2 {
+    margin-bottom: 0.5em;
+  }
+  h3 {
+    font-size: 1.1em;
+  }
+  strong {
+    margin-top: 1em;
+    font-size: 1.5em;
+    font-weight: 400;
+    a {
+      color: u.$main-clr;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  @include u.breakpoint(lg) {
+    width: 90%;
+    margin: auto;
+    align-items: center;
+  }
+  @include u.breakpoint(sm) {
+    width: 80%;
+    text-align: center;
+    h2 {
+      margin-bottom: 0.4em;
+    }
+    h3 {
+      font-size: 1.25em;
+      margin-bottom: 0.5em;
+    }
+    strong {
+      margin-top: 0.5em;
+      font-size: 1.5em;
+    }
+  }
+}

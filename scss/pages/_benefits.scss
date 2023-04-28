@@ -7,6 +7,10 @@
     flex-direction: column;
     text-align: center;
     justify-content: center;
+    @include u.breakpoint(lg) {
+      width: 90%;
+      margin: 3em auto;
+    }
     @include u.breakpoint(sm) {
       margin-top: 4em;
       align-items: center;
@@ -16,6 +20,16 @@
     display: flex;
     justify-content: space-between;
     padding-right: 5%;
+    @include u.breakpoint(xlg) {
+      justify-content: start;
+      padding: 0;
+      gap: 3%;
+    }
+    @include u.breakpoint(md) {
+      flex-direction: column;
+      gap: 16em;
+      align-items: center;
+    }
     @include u.breakpoint(sm) {
       flex-direction: column;
       align-items: center;
@@ -40,7 +54,7 @@
       font-size: 1.25em;
       @include u.breakpoint(sm) {
         width: 80%;
-        font-weight: 400;
+        font-weight: 600;
       }
     }
     @include u.breakpoint(sm) {
@@ -63,6 +77,22 @@
   display: flex;
   align-items: space-between;
   justify-content: center;
+  @include u.breakpoint(xlg) {
+    width: 40%;
+  }
+  @include u.breakpoint(lg) {
+    width: 50%;
+  }
+  @include u.breakpoint(md) {
+    width: 90%;
+    h3 {
+      text-align: center;
+      font-size: 1.5em !important;
+    }
+    article {
+      font-size: 1.1em;
+    }
+  }
   @include u.breakpoint(sm) {
     width: 90%;
     height: 35.5em;
@@ -77,6 +107,9 @@
     font-size: 1.5em;
     font-weight: 600;
     width: 100%;
+    @include u.breakpoint(lg) {
+      font-size: 1.25em;
+    }
     @include u.breakpoint(sm) {
       text-align: center;
       margin-bottom: 1em;
@@ -92,6 +125,9 @@
     article {
       width: 80%;
       line-height: 1.75em;
+      @include u.breakpoint(lg) {
+        width: 100%;
+      }
       @include u.breakpoint(sm) {
         width: 100%;
         text-align: center;
@@ -128,6 +164,22 @@
   display: block;
   text-align: center;
   padding: 0.25em;
+  @include u.breakpoint(lg) {
+    text-align: center;
+    font-size: 1.35em;
+  }
+  @include u.breakpoint(md) {
+    font-size: 1.5em;
+    display: block;
+    text-align: center;
+  }
+}
+
+.b-subscribe {
+  transition: all 300ms ease-in-out;
+  &:hover {
+    scale: 1.03;
+  }
 }
 
 .second-subscribe {
@@ -135,6 +187,9 @@
   width: 100%;
   justify-content: center;
   gap: 0.5em;
+  @include u.breakpoint(lg) {
+    flex-direction: column;
+  }
   @include u.breakpoint(sm) {
     flex-direction: column;
   }
@@ -183,16 +238,25 @@
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   height: 20em;
-  @include u.breakpoint(sm) {
+  @include u.breakpoint(lg) {
+    width: 45%;
+  }
+  @include u.breakpoint(md) {
     width: 90%;
     border-radius: 10px;
   }
   &__header {
     padding: 2em;
+    @include u.breakpoint(lg) {
+      padding: 2em 1em 2em 2em;
+    }
     p {
       font-size: 1.6em;
       font-weight: 600;
       color: u.$body-clr;
+      @include u.breakpoint(lg) {
+        font-size: 1.3em;
+      }
       @include u.breakpoint(sm) {
         font-size: 1.5em;
       }
@@ -203,6 +267,10 @@
       margin-right: 2em;
       color: u.$body-clr;
       font-weight: 600;
+      transition: all 300ms ease-in-out;
+      &:hover {
+        scale: 1.03;
+      }
       @include u.breakpoint(sm) {
         margin: 0;
         font-size: 1.1em;
@@ -220,6 +288,13 @@
     align-items: center;
     gap: 2em;
     justify-content: center;
+    @include u.breakpoint(lg) {
+      width: 80%;
+      gap: 1em;
+      p {
+        margin: 0;
+      }
+    }
     @include u.breakpoint(sm) {
       width: 90%;
     }
@@ -243,6 +318,14 @@
     @include u.gradient-border(180deg, u.$dark-secondary-clr, u.$secondary-clr);
     border-radius: 10px;
     cursor: pointer;
+    transition: all 300ms ease-in-out;
+    &:hover {
+      scale: 1.03;
+    }
+    @include u.breakpoint(lg) {
+      width: 90%;
+      margin: 0.5em;
+    }
     @include u.breakpoint(sm) {
       width: 90%;
       margin-top: 0.5em;
@@ -258,6 +341,18 @@
       width: 1.25em;
       fill: u.$secondary-clr;
     }
+  }
+}
+
+@include u.breakpoint(lg) {
+  .news-benefits {
+    width: 100%;
+  }
+  .b-mail {
+    border-radius: 5px;
+  }
+  .b-subscribe {
+    border-radius: 5px;
   }
 }
 
