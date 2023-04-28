@@ -116,6 +116,9 @@ nav {
 
 .navbar-toggler {
   border: 1px solid #fff;
+  &:focus {
+    box-shadow: none;
+  }
 }
 
 .navbar {
@@ -127,6 +130,9 @@ nav {
     gap: 23%;
     @include u.breakpoint(xlg) {
       gap: 15%;
+    }
+    @media (max-width: 400px) {
+      flex-wrap: nowrap;
     }
   }
 }
@@ -154,6 +160,13 @@ nav {
   justify-content: space-between;
 }
 
+@include u.breakpoint(lg) {
+  .navbar-collapse {
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+}
+
 @include u.breakpoint(sm) {
   .nav-ul {
     flex-direction: column;
@@ -177,7 +190,6 @@ nav {
       padding: 0.5em 1em;
       position: sticky;
       margin-top: 0;
-      flex-wrap: nowrap;
     }
   }
 

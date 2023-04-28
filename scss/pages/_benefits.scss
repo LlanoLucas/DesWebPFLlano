@@ -27,7 +27,7 @@
     }
     @include u.breakpoint(md) {
       flex-direction: column;
-      gap: 16em;
+      gap: 10em;
       align-items: center;
     }
     @include u.breakpoint(sm) {

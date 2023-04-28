@@ -152,6 +152,9 @@ nav ul li a:hover {
 .navbar-toggler {
   border: 1px solid #fff;
 }
+.navbar-toggler:focus {
+  box-shadow: none;
+}
 
 .navbar {
   position: sticky;
@@ -165,6 +168,11 @@ nav ul li a:hover {
 @media (max-width: 75em) {
   .navbar-expand-lg {
     gap: 15%;
+  }
+}
+@media (max-width: 400px) {
+  .navbar-expand-lg {
+    flex-wrap: nowrap;
   }
 }
 
@@ -191,6 +199,12 @@ nav ul li a:hover {
   justify-content: space-between;
 }
 
+@media (max-width: 62em) {
+  .navbar-collapse {
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+}
 @media (max-width: 36em) {
   .nav-ul {
     flex-direction: column;
@@ -212,7 +226,6 @@ nav ul li a:hover {
     padding: 0.5em 1em;
     position: sticky;
     margin-top: 0;
-    flex-wrap: nowrap;
   }
   .liked-courses svg {
     display: none;
@@ -1590,6 +1603,7 @@ main h2 {
     width: 100%;
     padding: 0 1em 0 1em;
     margin-bottom: 1em;
+    justify-content: center;
   }
   .courses-body article .bi-arrow-bar-right {
     display: none;
@@ -1820,7 +1834,7 @@ main h2 {
 @media (max-width: 48em) {
   .benefits-main {
     flex-direction: column;
-    gap: 16em;
+    gap: 10em;
     align-items: center;
   }
 }
