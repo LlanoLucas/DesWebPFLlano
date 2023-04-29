@@ -2263,6 +2263,7 @@ main h2 {
   font-size: 2.5em;
   margin: auto auto 1em 1em;
   font-weight: 600;
+  text-align: left;
 }
 @media (max-width: 36em) {
   .about-header h1 {
@@ -2484,10 +2485,8 @@ main h2 {
     background-color: #212121;
   }
   .error-body img {
-    width: 60%;
-    margin-left: 50%;
-    transform: translateX(-50%);
-    left: 0;
+    width: 15%;
+    left: 1em;
   }
 }
 

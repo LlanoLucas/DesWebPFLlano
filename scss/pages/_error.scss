@@ -12,10 +12,8 @@
   @include u.breakpoint(sm) {
     background-color: u.$body-clr;
     img {
-      width: 60%;
-      margin-left: 50%;
-      transform: translateX(-50%);
-      left: 0;
+      width: 15%;
+      left: 1em;
     }
   }
 }
